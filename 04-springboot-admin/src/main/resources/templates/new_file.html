@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+ <head></head>
+ <body>
+  <aside th:fragment="adminaside" class="byte-layout-sider byte-layout-sider-light mp-main-sider" style="width: 256px;"> 
+   <div class="byte-layout-sider-children"> 
+    <div class="mp-menu-wrapper f-min-scroll f-hover-scroll mp-menu-wrapper-can-scroll"> 
+     <div class="byte-menu garr-menu"> 
+      <div class="byte-menu-item selected 主页_tab"> 
+       <span style="padding-left: 0px; display: block;"> 
+        <div class="selected-border-left"></div> <a class="active" aria-current="page" href="/profile_v4/index">
+         <svg width="20" height="20" fill="currentColor">
+          <defs>
+           <path id="menu-index_svg__a" d="M1.333 17.333a.666.666 0 01-.666-.666V6.41c0-.223.11-.43.296-.554L8.615.745a.665.665 0 01.74 0l7.681 5.11a.668.668 0 01.297.556v10.256a.666.666 0 01-.666.666h-6.5A.334.334 0 019.833 17v-1.333h.417l-.417-.001H7.75h.417V17c0 .184-.15.333-.334.333h-6.5zM8.986 2.502L2.333 6.945v8.722H6.5V10.5c0-.368.298-.667.667-.667h3.666c.369 0 .667.299.667.667v5.167h4.167v-8.72L8.986 2.501zm.847 8.998H8.167v4.166h1.666V11.5z"></path>
+          </defs>
+          <g fill-rule="evenodd" transform="translate(1 1)">
+           <mask id="menu-index_svg__b" fill="#fff">
+            <use xlink:href="#menu-index_svg__a"></use>
+           </mask>
+           <g mask="url(#menu-index_svg__b)">
+            <circle cx="75" cy="75" r="75" transform="translate(-66 -66)"></circle>
+           </g>
+          </g>
+         </svg>控制台</a></span> 
+      </div> 
+      <div class="byte-menu-inline base_creation_tab"> 
+       <div class="byte-menu-inline-header">
+        <span style="padding-left: 0px; display: block;">
+         <svg width="20" height="20" fill="currentColor">
+          <defs>
+           <path id="menu-creation_svg__a" d="M17 15.667c.184 0 .333.149.333.333v1a.333.333 0 01-.333.333H1A.333.333 0 01.667 17v-1c0-.184.149-.333.333-.333h16zM10.965.55l.001.001 3.097 3.113c.26.26.259.682-.001.942l-.426.425.006.006L4.678 14H1.333a.67.67 0 01-.66-.568l-.006-.099V9.988l8.657-8.725-.008-.007.706-.706c.26-.26.683-.26.943 0zM8.068 4.87L2.36 10.692v.003l1.613 1.612h.002l5.76-5.767-1.666-1.67zm2.405-2.451L9.235 3.68l1.679 1.679 1.245-1.246-1.686-1.695z"></path>
+          </defs>
+          <g fill-rule="evenodd" transform="translate(1 1)">
+           <mask id="menu-creation_svg__b" fill="#fff">
+            <use xlink:href="#menu-creation_svg__a"></use>
+           </mask>
+           <g mask="url(#menu-creation_svg__b)">
+            <circle cx="75" cy="75" r="75" transform="translate(-66 -66)"></circle>
+           </g>
+          </g>
+         </svg><span>创作</span></span>
+        <span class="byte-menu-icon-suffix is-open">
+         <svg class="byte-icon byte-icon-down" viewbox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
+          <path d="M512 613.12L858.88 265.6a21.12 21.12 0 0130.08 0l30.08 30.72a21.12 21.12 0 010 30.08L542.08 704a42.24 42.24 0 01-60.16 0L104.96 326.4a21.12 21.12 0 010-30.08l30.08-30.72a21.12 21.12 0 0130.08 0z"></path>
+         </svg></span> 
+       </div> 
+       <div class="byte-menu-inline-content" style="height: auto;"> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/graphic/publish">文章</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/xigua/upload-video">视频</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/weitoutiao/publish">微头条</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/wenda/home/recommended">问答</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/audio/upload">音频</a></span>
+        </div> 
+       </div> 
+      </div> 
+      <div class="byte-menu-inline management_tab"> 
+       <div class="byte-menu-inline-header">
+        <span style="padding-left: 0px; display: block;">
+         <svg width="20" height="20">
+          <g fill="none">
+           <path d="M0 0h20v20H0z"></path>
+           <path fill="currentColor" d="M2.413 9.234l.058.029L10 13.225l7.529-3.962a.833.833 0 11.775 1.474l-7.912 4.165-.047.023-.043.019-.073.024-.033.009-.056.011-.072.01-.053.002H9.97l-.078-.007-.046-.007-.06-.014-.058-.017-.059-.024-.061-.029-7.913-4.165a.834.834 0 01.718-1.503zm7.986-7.766l8.097 4.416a.418.418 0 010 .732L10.4 11.032a.831.831 0 01-.798 0L1.504 6.616a.417.417 0 010-.732L9.6 1.468a.831.831 0 01.798 0zM10 3.148L4.314 6.25 10 9.352l5.686-3.102L10 3.148zm-.392 15.504l-7.913-4.165a.834.834 0 01.718-1.503l.058.029L10 16.975l7.529-3.962a.833.833 0 11.775 1.474l-7.912 4.165-.047.023-.043.019-.073.024-.033.009-.056.011-.072.01-.053.002H9.97l-.078-.007-.046-.007-.06-.014-.058-.017-.059-.024-.061-.029z"></path>
+          </g>
+         </svg>管理</span>
+        <span class="byte-menu-icon-suffix is-open">
+         <svg class="byte-icon byte-icon-down" viewbox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
+          <path d="M512 613.12L858.88 265.6a21.12 21.12 0 0130.08 0l30.08 30.72a21.12 21.12 0 010 30.08L542.08 704a42.24 42.24 0 01-60.16 0L104.96 326.4a21.12 21.12 0 010-30.08l30.08-30.72a21.12 21.12 0 0130.08 0z"></path>
+         </svg></span> 
+       </div> 
+       <div class="byte-menu-inline-content" style="height: auto;"> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/manage/content/all">作品管理</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/manage/comment/all">评论管理</a></span>
+        </div> 
+       </div> 
+      </div> 
+      <div class="byte-menu-inline data_helper_tab"> 
+       <div class="byte-menu-inline-header">
+        <span style="padding-left: 0px; display: block;">
+         <svg width="20" height="20">
+          <g fill="none" fill-rule="evenodd">
+           <path d="M0 0h20v20H0z"></path>
+           <path fill="currentColor" d="M18.333 18.333H1.667a.417.417 0 01-.417-.416v-.834c0-.23.187-.416.417-.416h.416V9.62c0-.48.4-.871.893-.871h3.69V2.544c0-.485.427-.877.953-.877h4.762c.526 0 .952.392.952.877v4.123h3.69c.494 0 .894.373.894.833v9.167h.416c.23 0 .417.186.417.416v.834c0 .23-.187.416-.417.416zM6.667 10.417H3.75v6.25h2.917v-6.25zm5-7.084H8.333v13.334h3.334V3.333zm4.583 5h-2.917v8.334h2.917V8.333z"></path>
+          </g>
+         </svg>数据</span>
+        <span class="byte-menu-icon-suffix is-open">
+         <svg class="byte-icon byte-icon-down" viewbox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
+          <path d="M512 613.12L858.88 265.6a21.12 21.12 0 0130.08 0l30.08 30.72a21.12 21.12 0 010 30.08L542.08 704a42.24 42.24 0 01-60.16 0L104.96 326.4a21.12 21.12 0 010-30.08l30.08-30.72a21.12 21.12 0 0130.08 0z"></path>
+         </svg></span> 
+       </div> 
+       <div class="byte-menu-inline-content" style="height: auto;"> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/analysis/income-overview">收益数据</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/analysis/works-overall/all">作品数据</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/analysis/fans/overview">粉丝数据</a></span>
+        </div> 
+       </div> 
+      </div> 
+      <div class="byte-menu-item 提现_tab">
+       <span style="padding-left: 0px; display: block;">
+        <div class="selected-border-left"></div><a href="/profile_v4/personal/checkout-center">
+         <svg width="20" height="20">
+          <g fill="none" fill-rule="evenodd">
+           <path d="M0 0h20v20H0z"></path>
+           <path fill="currentColor" d="M10 .833c5.063 0 9.167 4.104 9.167 9.167S15.063 19.167 10 19.167.833 15.063.833 10 4.937.833 10 .833zM10 2.5a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM8.14 5.69l1.768 1.768 1.767-1.768a.419.419 0 01.59 0l.589.59a.416.416 0 010 .589l-2.068 2.067h2.13c.23 0 .417.187.417.417v.833c0 .23-.186.417-.416.417h-2.084v1.064h2.084c.23 0 .416.186.416.416v.834c0 .23-.186.416-.416.416h-2.084v1.25c0 .23-.186.417-.416.417h-.834a.417.417 0 01-.416-.417v-1.25H7.083a.416.416 0 01-.416-.416v-.834c0-.23.186-.416.416-.416h2.084v-1.064H7.083a.417.417 0 01-.416-.417v-.833c0-.23.186-.417.416-.417h1.945l-.004-.005L6.96 6.87a.419.419 0 010-.59l.59-.589a.418.418 0 01.589 0z"></path>
+          </g>
+         </svg>提现</a></span> 
+      </div> 
+      <div class="byte-menu-inline guide_tab"> 
+       <div class="byte-menu-inline-header">
+        <span style="padding-left: 0px; display: block;">
+         <svg width="20" height="20">
+          <g fill="none" fill-rule="evenodd">
+           <path d="M0 0h20v20H0z"></path>
+           <path fill="currentColor" fill-rule="nonzero" d="M10 .833a9.166 9.166 0 019.157 8.75H17.49a7.5 7.5 0 10-7.628 7.916L10 17.5v1.667C4.937 19.167.833 15.063.833 10S4.937.833 10 .833zm.635 8.315l3.88 3.88h3.09v1.667h-1.422l1.229 1.229-1.179 1.178-1.229-1.229v1.423h-1.666v-3.09l-3.881-3.88 1.178-1.178zM10 5.417c2.39 0 4.354 1.83 4.565 4.166h-1.678A2.918 2.918 0 109.9 12.915l.1.002v1.666a4.583 4.583 0 010-9.166z"></path>
+          </g>
+         </svg>成长指南</span>
+        <span class="byte-menu-icon-suffix is-open">
+         <svg class="byte-icon byte-icon-down" viewbox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
+          <path d="M512 613.12L858.88 265.6a21.12 21.12 0 0130.08 0l30.08 30.72a21.12 21.12 0 010 30.08L542.08 704a42.24 42.24 0 01-60.16 0L104.96 326.4a21.12 21.12 0 010-30.08l30.08-30.72a21.12 21.12 0 0130.08 0z"></path>
+         </svg></span> 
+       </div> 
+       <div class="byte-menu-inline-content" style="height: auto;"> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/personal/creator-plan/index">创作权益</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/personal/auth?enter_from=main_page">头条认证</a></span> 
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/activity/task-list">创作引导</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/personal/creative-school?enter_from=main_page">创作学院</a></span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="byte-menu-inline tools_tab"> 
+       <div class="byte-menu-inline-header">
+        <span style="padding-left: 0px; display: block;">
+         <svg width="20" height="20">
+          <g fill="none" fill-rule="evenodd">
+           <path d="M0 0h20v20H0z"></path>
+           <path fill="currentColor" fill-rule="nonzero" d="M10.356.59l7.506 3.56c.291.138.477.43.477.753v9.358a.833.833 0 01-.476.753l-7.506 3.569a.832.832 0 01-.716 0l-7.494-3.569a.832.832 0 01-.475-.752v-9.36c0-.321.185-.614.476-.752L9.642.59a.827.827 0 01.714 0zM3.338 6.482v7.253l5.895 2.806-.109-7.154-.015-.008-5.77-2.897zm13.334-.001l-5.824 2.9-.056.027.107 7.07 5.773-2.744V6.482zM10 2.265l-5.832 2.77L9.857 7.89c.078.04.17.04.248 0l5.735-2.855L10 2.265z"></path>
+          </g>
+         </svg>工具</span>
+        <span class="byte-menu-icon-suffix is-open">
+         <svg class="byte-icon byte-icon-down" viewbox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
+          <path d="M512 613.12L858.88 265.6a21.12 21.12 0 0130.08 0l30.08 30.72a21.12 21.12 0 010 30.08L542.08 704a42.24 42.24 0 01-60.16 0L104.96 326.4a21.12 21.12 0 010-30.08l30.08-30.72a21.12 21.12 0 0130.08 0z"></path>
+         </svg></span> 
+       </div> 
+       <div class="byte-menu-inline-content" style="height: auto;"> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/lab"><span>功能实验室</span></a> </span> 
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/index/origin-protect/article">原创保护</a></span>
+        </div> 
+        <div class="byte-menu-item">
+         <span style="padding-left: 24px; display: block;">
+          <div class="selected-border-left"></div><a href="/profile_v4/manage/resource/images"><span>图片素材</span></a> </span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="byte-menu-item 设置_tab">
+       <span style="padding-left: 0px; display: block;">
+        <div class="selected-border-left"></div><a href="/profile_v4/personal/info">
+         <svg width="20" height="20">
+          <g fill="none">
+           <path d="M0 0h20v20H0z"></path>
+           <path fill="currentColor" d="M10 .91c.674 0 1.34.073 1.986.219l.374.084 1.165 2.656 2.868-.314.26.283a9.094 9.094 0 011.987 3.455l.113.363-.224.308L17.046 10l1.707 2.344-.113.363a9.083 9.083 0 01-1.988 3.455l-.259.283-2.868-.314-1.165 2.656-.374.084a9.015 9.015 0 01-1.986.22c-.674 0-1.34-.074-1.987-.22l-.373-.084-.154-.351-1.01-2.305-2.869.314-.26-.283a9.09 9.09 0 01-1.987-3.456l-.113-.363.224-.307L2.954 10 1.247 7.657l.113-.363a9.08 9.08 0 011.988-3.456l.259-.283 2.868.314L7.64 1.213l.373-.084A9.03 9.03 0 0110 .91zm0 1.514c-.434 0-.864.037-1.285.11l-.933 2.128a1.24 1.24 0 01-1.27.735l-2.296-.251a7.6 7.6 0 00-1.29 2.243l1.37 1.88a1.241 1.241 0 010 1.461l-1.37 1.881a7.6 7.6 0 001.29 2.243l2.295-.25a1.237 1.237 0 011.27.734l.934 2.128a7.513 7.513 0 002.57 0l.933-2.128a1.24 1.24 0 011.27-.735l2.296.251a7.594 7.594 0 001.29-2.242l-1.37-1.882a1.24 1.24 0 010-1.46l1.37-1.882a7.594 7.594 0 00-1.29-2.242l-2.295.25a1.237 1.237 0 01-1.27-.734l-.934-2.128A7.513 7.513 0 0010 2.424zm0 3.788A3.78 3.78 0 0113.773 10c0 2.091-1.688 3.788-3.773 3.788S6.227 12.09 6.227 10A3.78 3.78 0 0110 6.212zm0 1.515A2.266 2.266 0 007.742 10c0 1.256 1.012 2.273 2.258 2.273s2.258-1.017 2.258-2.273A2.266 2.266 0 0010 7.727z"></path>
+          </g>
+         </svg>设置</a></span> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </aside> 
+ </body>
+</html>
