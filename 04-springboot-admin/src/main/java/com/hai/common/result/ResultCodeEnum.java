@@ -17,6 +17,9 @@ public enum ResultCodeEnum {
     NICK_NAME_CHECK(false, 602, "参数非法不能为空"),
     NICK_NAME_ERROR(false, 402, "用户名密码不正确"),
     PASSWORD_ERROR(false, 403, "密码不正确"),
+    NICK_NAME_IS_NULL(false, 701, "用户名禁止为空"),
+    PASSWORD_IS_NULL(false, 702, "密码禁止为空"),
+
     PARAM_ERROR(false,401,"参数校验不通过！");
 
 

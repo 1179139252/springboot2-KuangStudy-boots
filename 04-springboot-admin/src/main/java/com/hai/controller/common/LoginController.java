@@ -3,9 +3,11 @@ package com.hai.controller.common;
 
 import com.hai.common.constant.RConstant;
 import com.hai.common.result.ResultCodeEnum;
+import com.hai.common.validator.KAssert;
 import com.hai.exception.ValidatorException;
 import com.hai.pojo.user.User;
 import com.hai.service.user.UserServiceImpl;
+import com.hai.utils.pwd.Aes;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -73,7 +75,10 @@ public class LoginController extends BaseController {
 
     @ResponseBody
     @PostMapping("/toLogin")
-    public String toLogin(@RequestParam("nickname") String nickname, @RequestParam("password") String password, HttpSession session) {
+    public String toLogin(@RequestParam("nickname") String nickname, @RequestParam("password") String password, HttpSession session) throws Exception {
+
+        KAssert.isEmpty(nickname,ResultCodeEnum.NICK_NAME_IS_NULL);
+        KAssert.isEmpty(password,ResultCodeEnum.PASSWORD_IS_NULL);
 
         log.info("你当前的登录的用户名是{},密码是{}", nickname, password);
         User user = userService.getUserByName(nickname);
@@ -83,7 +88,7 @@ public class LoginController extends BaseController {
             throw new ValidatorException(ResultCodeEnum.NICK_NAME_ERROR);
         }
 //        判断密码是否正确
-        if (user != null && !user.getPassword().equalsIgnoreCase(password)) {
+        if (user != null && !user.getPassword().equalsIgnoreCase(Aes.aesEncrypt(password))) {
             log.info("密码有误");
             throw new ValidatorException(ResultCodeEnum.PASSWORD_ERROR);
         }
