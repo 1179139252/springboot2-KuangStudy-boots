@@ -1,14 +1,18 @@
 package com.hai.controller.state;
-
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hai.controller.common.BaseController;
 import com.hai.pojo.state.State;
 import com.hai.service.state.StateIServicempl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -38,15 +42,27 @@ public class StateController extends BaseController {
      */
 
     @GetMapping("/state/list")
-    public String templatelist(ModelMap map){
+    public String templatelist(ModelMap map,@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo, @RequestParam(value = "pagesize",defaultValue = "10") Integer pagesize,ModelMap modelMap){
 
+        // 3: 渲染
 
-//        查询所有的列表 返回数据到前台展示
-        List<State> list = stateIServicempl.list();
-
-        map.put("state_list",list);
+        Page<State> pageState = new Page<>(pageNo,pagesize);
+        Page<State> page = stateIServicempl.page(pageState);
+        // 2: 把数据放入到作用域
+        // 每页显示的具体数据
+        modelMap.put("state_list", page.getRecords());
+        // 总记录数
+        modelMap.put("total", page.getTotal());
+        //pageSize是每页显示多少条
+        modelMap.put("pageSize", page.getSize());
+        // pageNo 当前页
+        modelMap.put("pageNo", page.getCurrent());
+        //  pages分了多少页
+        modelMap.put("pages", page.getPages());
 
         return "/state/template";
     }
+
+
 
 }

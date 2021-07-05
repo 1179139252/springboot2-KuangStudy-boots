@@ -1,0 +1,63 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+
+<div th:fragment="pagelist">
+    <tr data-index="1" th:each="state,stateCOUnt:${state_list}" >
+        <td class="layui-table-col-special">
+            <div class="layui-table-cell laytable-cell-numbers" th:text="${state.id}"></div>
+        </td>
+        <td>
+            <a href="https://www.kuangstudy.com/bbs?cid=1"
+               target="_blank"><span th:text="${state.title}">程序人生</span></a>
+            <!---->
+        </td>
+        <!--                            <td>-->
+        <!--                                <span th:text="${state.description}"></span>-->
+        <!--                                &lt;!&ndash;&ndash;&gt;-->
+        <!--                            </td>-->
+        <td>
+            <span th:text="${state.personnum}"></span>
+            <!---->
+        </td>
+
+        <td>
+            <span th:text="${state.username}"></span>
+            <!---->
+        </td>
+
+        <td>
+            <span th:if="${state.status==0}" style="color: red">未发布</span>
+            <span th:if="${state.status==1}" style="color: green">发布</span>
+        </td>
+        <td>
+            <span th:text="${state.endtime}"></span>
+            <!---->
+        </td>
+
+
+        <td>
+            <span th:text="${#dates.format(state.createTime,'yyyy-MM-dd hh:mm:ss')}"></span>
+            <!---->
+        </td>
+
+
+
+        <td class="layui-table-col-special">
+            <div class="layui-table-cell">
+                <a href="javascript:void(0);"
+                   class="layui-btn layui-btn-danger layui-btn-xs"><i
+                        class="iconfont iconremove1 mr-1"></i>删除</a>
+                <a href="javascript:void(0);" class="layui-btn layui-btn-xs"><i
+                        class="iconfont iconedit1 fz12 mr-2"></i>编辑</a>
+                <!---->
+                <!---->
+            </div>
+        </td>
+    </tr>
+</div>
+
+</body>
+</html>

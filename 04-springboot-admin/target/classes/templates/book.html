@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="../../../../../../../../学习文档/学相伴/2021-07-01%20(2)/02、素材/kuangstudyweb/css/book.css"/>
+	</head>
+	<body data-ext-version="3.1">
+		<main class="container flex">
+			<aside class="book-menu">
+				<nav>
+					<h2 class="book-brand"><a href="/golang"><span>Go 语言设计与实现</span></a></h2>
+					<div class="book-search"><input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/">
+						<div class="book-search-spinner hidden"></div>
+						<ul id="book-search-results"></ul>
+					</div>
+					<ul>
+						<li>
+							<a href="https://draveness.me">面向信仰编程</a>
+						</li>
+						<li>
+							<a href="https://github.com/draveness">GitHub</a>
+						</li>
+						<li>
+							<a href="https://img.draveness.me/2020-03-11-15839264230785-wechat-qr-code.png">微信公众号</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/draven0xff">Twitter</a>
+						</li>
+						<li>
+							<a href="https://weibo.com/u/5123574960">Weibo</a>
+						</li>
+					</ul>
+					<hr>
+					<ul>
+						<li>第一部分 预备知识
+							<ul>
+								<li>第一章 准备工作
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part1-prerequisite/ch01-prepare/golang-debug/">1.1 调试 Go 语言</a>
+										</li>
+									</ul>
+								</li>
+								<li>第二章 编译原理
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/">2.1 概述</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-lexer-and-parser/">2.2 词法和语法分析</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-typecheck/">2.3 类型检查</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-ir-ssa/">2.4 中间代码生成</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-machinecode/">2.5 机器码生成</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>第二部分 基础知识
+							<ul>
+								<li>第三章 数据结构
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-array/">3.1 数组</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-array-and-slice/">3.2 切片</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/">3.3 哈希表</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-string/">3.4 字符串</a>
+										</li>
+									</ul>
+								</li>
+								<li>第四章 语言基础
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch04-basic/golang-function-call/">4.1 函数调用</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch04-basic/golang-interface/">4.2 接口</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch04-basic/golang-reflect/">4.3 反射</a>
+										</li>
+									</ul>
+								</li>
+								<li>第五章 常用关键字
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-for-range/">5.1 for 和 range</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-select/">5.2 select</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-defer/">5.3 defer</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-panic-recover/">5.4 panic 和 recover</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-make-and-new/">5.5 make 和 new</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>第三部分 运行时
+							<ul>
+								<li>第六章 并发编程
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-context/">6.1 上下文 Context</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-sync-primitives/">6.2 同步原语与锁</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-timer/">6.3 定时器</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-channel/">6.4 Channel</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-goroutine/">6.5 调度器</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-netpoller/">6.6 网络轮询器</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-sysmon/">6.7 系统监控</a>
+										</li>
+									</ul>
+								</li>
+								<li>第七章 内存管理
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-memory-allocator/">7.1 内存分配器</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-garbage-collector/">7.2 垃圾收集器</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-stack-management/">7.3 栈内存管理</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>第四部分 进阶内容
+							<ul>
+								<li>第八章 元编程
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part4-advanced/ch08-metaprogramming/golang-plugin/">8.1 插件系统</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part4-advanced/ch08-metaprogramming/golang-code-gen/">8.2 代码生成</a>
+										</li>
+									</ul>
+								</li>
+								<li>第九章 标准库
+									<ul>
+										<li>
+											<a href="https://draveness.me/golang/docs/part4-advanced/ch09-stdlib/golang-json/">9.1 JSON</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part4-advanced/ch09-stdlib/golang-net-http/">9.2 HTTP</a>
+										</li>
+										<li>
+											<a href="https://draveness.me/golang/docs/part4-advanced/ch09-stdlib/golang-database-sql/">9.3 数据库</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<script>
+					(function() {
+						var menu = document.querySelector("aside.book-menu nav");
+						addEventListener("beforeunload", function(event) {
+							localStorage.setItem("menu.scrollTop", menu.scrollTop);
+						});
+						menu.scrollTop = localStorage.getItem("menu.scrollTop");
+					})();
+				</script>
+			</aside>
+			<div class="book-page">
+				<header class="book-header">
+					<div class="flex align-center justify-between"><label for="menu-control"><img src="/golang/svg/menu.svg" class="book-icon" alt="Menu"></label>
+						<strong>Go 语言设计与实现</strong>
+						<label for="toc-control"><img src="/golang/svg/toc.svg" class="book-icon" alt="Table of Contents"></label></div>
+					<aside class="hidden clearfix">
+						<nav id="TableOfContents">
+							<ul>
+								<li>
+									<a href="#go-语言设计与实现">Go 语言设计与实现</a>
+									<ul>
+										<li>
+											<a href="#历史和现状">历史和现状</a>
+										</li>
+										<li>
+											<a href="#为什么要写这本书">为什么要写这本书</a>
+										</li>
+										<li>
+											<a href="#写作理念">写作理念</a>
+										</li>
+										<li>
+											<a href="#目标读者">目标读者</a>
+										</li>
+										<li>
+											<a href="#主要内容">主要内容</a>
+										</li>
+										<li>
+											<a href="#互动与勘误">互动与勘误</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</aside>
+				</header>
+				<article class="markdown">
+					<h1 id="go-语言设计与实现">Go 语言设计与实现
+<a class="anchor" href="#go-%e8%af%ad%e8%a8%80%e8%ae%be%e8%ae%a1%e4%b8%8e%e5%ae%9e%e7%8e%b0">#</a></h1>
+					<h2 id="历史和现状">历史和现状
+<a class="anchor" href="#%e5%8e%86%e5%8f%b2%e5%92%8c%e7%8e%b0%e7%8a%b6">#</a></h2>
+					<p>Go 语言是诞生于 2009 年的编程语言，发展到今天已经有过去了 10 多年<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。目前的 Go 语言在国内外的社区都非常热门，很多著名的开源框架，例如：Kubernetes、etcd 和 Prometheus 等都使用 Go 语言开发，近年来热门的微服务架构和云原生技术也为 Go 语言社区带来了非常多的活力。</p>
+					<p><img src="https://img.draveness.me/2020-02-07-15810669816491-golang-banner.jpg" alt="golang-banner"></p>
+					<p><strong>图 1 - Go 语言</strong></p>
+					<p>作者目前也使用 Go 语言作为日常开发的主要语言，虽然 Go 语言没有 Lisp 系语言的开发效率和强大表达能力，但是却是一门非常容易使用并且大规模运用的工程语言，这也是作者学习和使用 Go 语言的主要原因。</p>
+					<p>作者是从 2018 年才开始学习和使用 Go 语言的，刚刚接触 Go 语言时是有些排斥和拒绝的，一度认为 Go 语言 GOPATH 的设计非常诡异，而简单的语法也导致了低下的表达能力并且影响开发效率。但是随着对 Go 语言的深入学习和理解，作者的这一观念也在不断改变。</p>
+					<p>到了今天，作者认为我们在工业界需要这么一门语法简单的编译型语言，它能够提供简单的抽象和概念，虽然目前 Go 语言也有很多问题，但是语言以及周边工具的不断完善也让作者感受到了社区的活力，也坚定地认为这门语言未来的发展会越来愈好。</p>
+					<h2 id="为什么要写这本书">为什么要写这本书
+<a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%86%99%e8%bf%99%e6%9c%ac%e4%b9%a6">#</a></h2>
+					<p>目前的市面上分析 Go 语言实现的书籍较少，多数的书籍都偏重于 Go 语言基础和实战。虽然目前有很多分析 Go 语言的博客，但是它们却都面临以下的两个问题：</p>
+					<ul>
+						<li>大量博客会成段的展示源代码的实现细节，没有提供较好的可读性；</li>
+						<li>少部分博客的质量较高，它们对 Go 语言的一些模块讲解的比较深入，但是不够系统，不能形成足够丰富、完整的内容；</li>
+					</ul>
+					<p>除了上述的这些原因之外，目前关心 Go 语言设计以及演进的博客和书籍比较罕见，然而理解 Go 语言的发展史是帮助我们深入理解语言的有效途径，我们不应该忽视这一过程。</p>
+					<h2 id="写作理念">写作理念
+<a class="anchor" href="#%e5%86%99%e4%bd%9c%e7%90%86%e5%bf%b5">#</a></h2>
+					<p>分析语言设计与实现的书籍不是特别的好写，很多文章都会陷入对不重要的细节，大量的篇幅都都是复制的源代码，分析介绍的过程也没有分清主次，不能提供很好的阅读体验。本书会遵循以下的一些理念为读者提供高质量的内容：</p>
+					<ul>
+						<li>通过大量配图帮助读者理解实现细节；</li>
+						<li>通过历史的演进和社区讨论理解设计背后的决策和原因；</li>
+						<li>删减源代码中的无关细节并给出精准到行的源码链接；</li>
+						<li>提供切实可行的源码阅读方法；</li>
+					</ul>
+					<p>作者会通过以上的不同手段帮助各位读者理解 Go 语言的设计以及实现原理。</p>
+					<h2 id="目标读者">目标读者
+<a class="anchor" href="#%e7%9b%ae%e6%a0%87%e8%af%bb%e8%80%85">#</a></h2>
+					<p>本书不建议没有任何编程经验的读者阅读，其目标读者包含以下几部分人群：</p>
+					<ul>
+						<li>学习过 Go 语言并且想要理解背后设计与实现的开发者；</li>
+						<li>有过其他语言的开发经验，想要学习 Go 语言的开发者；</li>
+					</ul>
+					<h2 id="主要内容">主要内容
+<a class="anchor" href="#%e4%b8%bb%e8%a6%81%e5%86%85%e5%ae%b9">#</a></h2>
+					<p>本书的主要内容可以分成四个主要部分，分别是编译原理、运行时、基础知识和进阶知识，这四部分几乎可以覆盖 Go 语言从编译到运行的方方面面，让我们对 Go 语言有更加整体和深刻的认识。下图的思维导读中展示了本书的主要内容：</p>
+					<p><img src="https://img.draveness.me/2020-02-07-15810644766743-contents-mindnode.png" alt="contents-mindnode"></p>
+					<p><strong>图 2 - Go 语言设计与实现主要内容</strong></p>
+					<p>通过阅读本书，你能深入理解 Go 语言的设计与实现，包括且不仅限于以下的内容：</p>
+					<ul>
+						<li>理解编译器的词法与语法解析、类型检查、中间代码生成以及机器码生成过程；</li>
+						<li>理解数组、切片、哈希表和字符串等数据结构的内部表示以及常见操作的原理；</li>
+						<li>理解 Go 语言中的函数、方法以及反射等语言特性；</li>
+						<li>理解常见并发原语 <code>Mutex</code>、<code>WaitGroup</code> 以及扩展原语的使用和原理；</li>
+						<li>理解 make、new、defer、select、for 和 range 等关键字的实现；</li>
+						<li>理解运行时中的调度器、网络轮询器、内存分配器、垃圾收集器的实现原理；</li>
+						<li>理解 HTTP、RPC、JSON 等标准库的设计与原理；</li>
+						<li>…</li>
+					</ul>
+					<h2 id="互动与勘误">互动与勘误
+<a class="anchor" href="#%e4%ba%92%e5%8a%a8%e4%b8%8e%e5%8b%98%e8%af%af">#</a></h2>
+					<p>如果你对文章的内容有疑问或者想要联系作者，可以直接在本书官方网站
+						<a href="draveness.me/golang/">draveness.me/golang/</a> 的对应章节留言，作者会<strong>在 24 小时内回复</strong>，如果暂时无法回答问题，也会通过 👀 表情留言，感谢您的支持与帮助。</p>
+					<section class="footnotes" role="doc-endnotes">
+						<hr>
+						<ol>
+							<li id="fn:1" role="doc-endnote">
+								<p>What is the history of the project?
+									<a href="https://golang.org/doc/faq#history">https://golang.org/doc/faq#history</a>
+									<a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a>
+								</p>
+							</li>
+						</ol>
+					</section>
+				</article>
+				<footer class="book-footer">
+					<div class="flex flex-wrap justify-between"></div>
+					<p><img width="70%" style="width:70%;height:70%;!important" src="https://img.draveness.me/2020-03-11-15839264230785-wechat-qr-code.png" alt="wechat-account-qrcode"></p>
+					<p>本作品采用
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</p>
+					<link rel="stylesheet" href="/golang/assets/prism.css">
+					<script type="text/javascript" src="/golang/assets/prism.js"></script>
+					<script>
+						(function(w, d, s, id) {
+							if(typeof(w.webpushr) !== 'undefined') return;
+							w.webpushr = w.webpushr || function() {
+								(w.webpushr.q = w.webpushr.q || []).push(arguments)
+							};
+							var js, fjs = d.getElementsByTagName(s)[0];
+							js = d.createElement(s);
+							js.id = id;
+							js.async = 1;
+							js.src = "https://cdn.webpushr.com/app.min.js";
+							fjs.parentNode.appendChild(js);
+						}(window, document, 'script', 'webpushr-jssdk'));
+						webpushr('setup', {
+							'key': 'BKEGOqbGDOw5cDK8oIeqPhiq0LKfd-U8kXuIdwc_qyR_AGs0QtzZFBICnOPmi9hnApzzdX0X0TXC-oJ1-nGupGY'
+						});
+					</script>
+					<div id="gitalk-container">
+						<div class="gt-container">
+							<div class="gt-meta"><span class="gt-counts"><a class="gt-link gt-link-counts" href="https://github.com/draveness/blog-comments/issues/140" target="_blank">104</a> 条评论</span>
+								<div class="gt-user">
+									<div class="gt-user-inner"><span class="gt-user-name">未登录用户</span><span class="gt-ico gt-ico-arrdown"><span class="gt-svg"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="1619"><path d="M511.872 676.8c-0.003 0-0.006 0-0.008 0-9.137 0-17.379-3.829-23.21-9.97l-251.277-265.614c-5.415-5.72-8.743-13.464-8.744-21.984 0-17.678 14.33-32.008 32.008-32.008 9.157 0 17.416 3.845 23.25 10.009l228.045 241.103 228.224-241.088c5.855-6.165 14.113-10.001 23.266-10.001 8.516 0 16.256 3.32 21.998 8.736 12.784 12.145 13.36 32.434 1.264 45.233l-251.52 265.6c-5.844 6.155-14.086 9.984-23.223 9.984-0.025 0-0.051 0-0.076 0z" p-id="1620"></path></svg></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="gt-header">
+								<a class="gt-avatar-github"><span class="gt-ico gt-ico-github"><span class="gt-svg"><svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64 524C64 719.602 189.356 885.926 364.113 947.017 387.65799 953 384 936.115 384 924.767L384 847.107C248.118 863.007 242.674 773.052 233.5 758.001 215 726.501 171.5 718.501 184.5 703.501 215.5 687.501 247 707.501 283.5 761.501 309.956 800.642 361.366 794.075 387.658 787.497 393.403 763.997 405.637 743.042 422.353 726.638 281.774 701.609 223 615.67 223 513.5 223 464.053 239.322 418.406 271.465 381.627 251.142 320.928 273.421 269.19 276.337 261.415 334.458 256.131 394.888 302.993 399.549 306.685 432.663 297.835 470.341 293 512.5 293 554.924 293 592.81 297.896 626.075 306.853 637.426 298.219 693.46 258.054 747.5 262.966 750.382 270.652 772.185 321.292 753.058 381.083 785.516 417.956 802 463.809 802 513.5 802 615.874 742.99 701.953 601.803 726.786 625.381 750.003 640 782.295 640 818.008L640 930.653C640.752 939.626 640 948.664978 655.086 948.665 832.344 888.962 960 721.389 960 524 960 276.576 759.424 76 512 76 264.577 76 64 276.576 64 524Z"></path>
+</svg>
+</span></span>
+								</a>
+								<div class="gt-header-comment"><textarea class="gt-header-textarea " placeholder="说点什么" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 72px;"></textarea>
+									<div class="gt-header-preview markdown-body hide"></div>
+									<div class="gt-header-controls">
+										<a class="gt-header-controls-tip" href="https://guides.github.com/features/mastering-markdown/" target="_blank"><span class="gt-ico gt-ico-tip"><span class="gt-svg"><svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 366.949535c-16.065554 0-29.982212 13.405016-29.982212 29.879884l0 359.070251c0 16.167882 13.405016 29.879884 29.982212 29.879884 15.963226 0 29.879884-13.405016 29.879884-29.879884L541.879884 396.829419C541.879884 380.763865 528.474868 366.949535 512 366.949535L512 366.949535z" p-id="3083"></path>
+  <path d="M482.017788 287.645048c0-7.776956 3.274508-15.553912 8.80024-21.181973 5.525732-5.525732 13.302688-8.80024 21.181973-8.80024 7.776956 0 15.553912 3.274508 21.079644 8.80024 5.525732 5.62806 8.80024 13.405016 8.80024 21.181973 0 7.776956-3.274508 15.656241-8.80024 21.181973-5.525732 5.525732-13.405016 8.697911-21.079644 8.697911-7.879285 0-15.656241-3.274508-21.181973-8.697911C485.292295 303.301289 482.017788 295.524333 482.017788 287.645048L482.017788 287.645048z" p-id="3084"></path>
+  <path d="M512 946.844409c-239.8577 0-434.895573-195.037873-434.895573-434.895573 0-239.8577 195.037873-434.895573 434.895573-434.895573 239.755371 0 434.895573 195.037873 434.895573 434.895573C946.895573 751.806535 751.755371 946.844409 512 946.844409zM512 126.17088c-212.740682 0-385.880284 173.037274-385.880284 385.777955 0 212.740682 173.037274 385.777955 385.880284 385.777955 212.740682 0 385.777955-173.037274 385.777955-385.777955C897.777955 299.208154 724.740682 126.17088 512 126.17088z" p-id="3085"></path>
+</svg>
+</span><span class="gt-ico-text">支持 Markdown 语法</span></span>
+										</a><button class="gt-btn gt-btn-preview"><span class="gt-btn-text">预览</span></button><button class="gt-btn gt-btn-login"><span class="gt-btn-text">使用 GitHub 登录</span></button></div>
+								</div>
+							</div>
+							<div class="gt-comments">
+								<div style="position: relative;">
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wujunze"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wujunze">wujunze</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">将近 2 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>nice</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">将近 2 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/wujunze/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/wujunze">@wujunze</a><br> nice
+													</p>
+												</blockquote>
+												<p>你是怎么发现的..</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@yinpeihao"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/yinpeihao">yinpeihao</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+													</p>
+													<blockquote>
+														<p>
+															<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/wujunze/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/wujunze">@wujunze</a><br> nice
+														</p>
+													</blockquote>
+													<p>你是怎么发现的..</p>
+												</blockquote>
+												<p>我也发现了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<blockquote>
+														<p>
+															<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+														</p>
+														<blockquote>
+															<p>
+																<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/wujunze/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/wujunze">@wujunze</a><br> nice
+															</p>
+														</blockquote>
+														<p>你是怎么发现的..</p>
+													</blockquote>
+													<p>我也发现了</p>
+												</blockquote>
+												<p>昨天开放了...</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@yinpeihao"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/yinpeihao">yinpeihao</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+													</p>
+													<blockquote>
+														<blockquote>
+															<p>
+																<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+															</p>
+															<blockquote>
+																<p>
+																	<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/wujunze/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/wujunze">@wujunze</a><br> nice
+																</p>
+															</blockquote>
+															<p>你是怎么发现的..</p>
+														</blockquote>
+														<p>我也发现了</p>
+													</blockquote>
+													<p>昨天开放了...</p>
+												</blockquote>
+												<p>哈哈哈哈，德莱文流皮</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wujunze"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wujunze">wujunze</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>
+													<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a> 还有几章要写的 好像没有完全写完啊
+													<g-emoji class="g-emoji" alias="grinning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png">😀</g-emoji>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<div class="email-fragment">还有不少要写的
+													<g-emoji class="g-emoji" alias="sweat_smile" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f605.png">😅</g-emoji>
+												</div>
+												<span class="email-hidden-toggle"><a href="#">…</a></span>
+												<div class="email-hidden-reply">
+													<div class="email-quoted-reply">On Fri, 28 Jun 2019 at 14:39, Panda ***@***.***&gt; wrote:
+														<a class="user-mention" href="https://github.com/draveness">@draveness</a> &lt;
+														<a href="https://github.com/draveness">https://github.com/draveness</a>&gt; 还有几章要写的 好像没有完全写完啊
+														<g-emoji class="g-emoji" alias="grinning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png">😀</g-emoji>
+
+														— You are receiving this because you were mentioned. Reply to this email directly, view it on GitHub &lt;
+														<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="419571053" data-permission-text="Title is private" data-url="https://github.com/draveness/blog-comments/issues/140" href="https://github.com/draveness/blog-comments/issues/140">#140</a>?email_source=notifications&amp;email_token=ABRRIRYRHDJWU6TNC25WB63P4WW35A5CNFSM4G5EHT2KYY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGODYZG33Y#issuecomment-506621423&gt;, or mute the thread &lt;
+														<a href="https://github.com/notifications/unsubscribe-auth/ABRRIR466MJS2Q5IR5VR3QTP4WW35ANCNFSM4G5EHT2A">https://github.com/notifications/unsubscribe-auth/ABRRIR466MJS2Q5IR5VR3QTP4WW35ANCNFSM4G5EHT2A</a>&gt; .
+													</div>
+													<div class="email-fragment"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wujunze"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wujunze">wujunze</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>还有不少要写的
+														<g-emoji class="g-emoji" alias="sweat_smile" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f605.png">😅</g-emoji><br> 期待你的好文章
+														<g-emoji class="g-emoji" alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>
+													</p>
+												</blockquote>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@daisuki-konbini"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/daisuki-konbini">daisuki-konbini</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>有PDF 版本么</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@tczf1128"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/tczf1128">tczf1128</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>问一下，图是用什么工具画的</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@llussy"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/llussy">llussy</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/tczf1128/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tczf1128">@tczf1128</a><br> 问一下，图是用什么工具画的
+													</p>
+												</blockquote>
+												<p>看到了，是用的Sketch</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@zyjblockchain"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/zyjblockchain">zyjblockchain</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>打个卡，开始精读，感谢作者的分享</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@lily-lee"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/lily-lee">lily-lee</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>你好，请问有参考资料/文献和延展阅读之类的吗？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">超过 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>你好，请问有参考资料/文献和延展阅读之类的吗？</p>
+												</blockquote>
+												<p>暂时没有</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wxxsw"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wxxsw">wxxsw</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>我从 Rails 转到 iOS，又从 iOS 往 Go 转，和你的方向有一点相似，但你实在太厉害了，各方面都能做的这么好，以后要多多拜读你写的东西，向大神看齐！
+													<g-emoji class="g-emoji" alias="blush" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png">😊</g-emoji>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wingsxdu"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wingsxdu">wingsxdu</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>打卡,宝藏博主</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@feilengcui008"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/feilengcui008">feilengcui008</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>建议明确一下分析的go版本</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/feilengcui008/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/feilengcui008">@feilengcui008</a><br> 建议明确一下分析的go版本
+													</p>
+												</blockquote>
+												<p>目前是 1.13，会加一章准备工作，里面会介绍当前的 Go 语言版本</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@xiaoheiAh"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/xiaoheiAh">xiaoheiAh</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬是真的牛皮,疯狂输出</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@beckbikang"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/beckbikang">beckbikang</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>nice too</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@beckbikang"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/beckbikang">beckbikang</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>看了大佬的github的commit，神人一枚啊。我想问一句，大佬单身吗？:)</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>看了大佬的github的commit，神人一枚啊。我想问一句，大佬单身吗？:)</p>
+												</blockquote>
+												<p>
+													<g-emoji class="g-emoji" alias="smiley" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png">😃</g-emoji>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@xing00lian"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/xing00lian">xing00lian</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬，图是用什么画的</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Charles-Xiao"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Charles-Xiao">Charles-Xiao</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>楼主一个人要把这块写的深入浅出感觉耗时会比较久，话说楼主有打算分工协作一下么？以及后续出版一下？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/xing00lian/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/xing00lian">@xing00lian</a><br> 大佬，图是用什么画的
+													</p>
+												</blockquote>
+												<p>
+													<a rel="nofollow" href="https://draveness.me/sketch-and-sketch">https://draveness.me/sketch-and-sketch</a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/Charles-Xiao/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Charles-Xiao">@Charles-Xiao</a><br> 楼主一个人要把这块写的深入浅出感觉耗时会比较久，话说楼主有打算分工协作一下么？以及后续出版一下？
+													</p>
+												</blockquote>
+												<p>暂时还没有</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@binzhangms"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/binzhangms">binzhangms</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>何时出书啊，等着买呢</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 1 年前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>何时出书啊，等着买呢</p>
+												</blockquote>
+												<p>有可能今年下半年</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@ilvcyy"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/ilvcyy">ilvcyy</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">12 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>这书真的是详解源码，为什么不出书呢？毕竟go已经是十多年的语言了，再不出书它就老了，剩余40%在哪里可以看到？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">12 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>这书真的是详解源码，为什么不出书呢？毕竟go已经是十多年的语言了，再不出书它就老了，</p>
+												</blockquote>
+												<p>也不怕晚，这不还在发展么</p>
+												<blockquote>
+													<p>剩余40%在哪里可以看到？</p>
+												</blockquote>
+												<p>还在写呢...</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@iBeiKeCyn"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/iBeiKeCyn">iBeiKeCyn</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">12 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>期待后续！何时开通付费通道呀？:D 我扫您还是您扫我（大雾）</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">12 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>期待后续！何时开通付费通道呀？:D 我扫您还是您扫我（大雾）</p>
+												</blockquote>
+												<p>仅支持 Bitcoin 匿名支付（大雾）</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@ClayAndMore"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/ClayAndMore">ClayAndMore</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">12 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>发现宝藏啊，请教下这个博客是用什么实现的</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">12 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>发现宝藏啊，请教下这个博客是用什么实现的</p>
+												</blockquote>
+												<p>Hugo-book</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@llifezou"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/llifezou">llifezou</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>不知道咋发现这些武功秘籍的,现在是不想吃饭不想睡觉就想看文章!如果我在北京遇见作者,一定抱着大腿死皮赖脸拜师...</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Cherrison"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Cherrison">Cherrison</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>第一章在哪里啊?</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>第一章在哪里啊?</p>
+												</blockquote>
+												<p>哈哈哈哈，第一章还没写，主要介绍怎么阅读和编译源代码</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@yangwenmai"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/yangwenmai">yangwenmai</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>认同作者的一句话：</p>
+												<blockquote>
+													<p>理解 Go 语言的发展史是帮助我们深入理解语言的有效途径，我们不应该忽视这一过程。</p>
+												</blockquote>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@luojiego"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/luojiego">luojiego</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>再不好好学习，我就40了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@gabryzhong"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/gabryzhong">gabryzhong</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>
+													<g-emoji class="g-emoji" alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png">👀</g-emoji>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@gabryzhong"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/gabryzhong">gabryzhong</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>刚刚开始使用go来提供一些webapi的服务，感觉go在设计业务层时过于面向过程了，使得代码段很难拆分干净</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>刚刚开始使用go来提供一些webapi的服务，感觉go在设计业务层时过于面向过程了，使得代码段很难拆分干净</p>
+												</blockquote>
+												<p>『过于面向过程』是指什么呢，Go 语言是可以使用面向对象的方式编程的</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@liaoxuefeng"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/liaoxuefeng">liaoxuefeng</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">10 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>nice</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@davidxiao"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/davidxiao">davidxiao</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">10 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>非常感谢，非常感谢，<br> 我发现这是目前最合适我、我最需要的、有基础、更有深度、系统的golang书
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@lupguo"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/lupguo">lupguo</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">9 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>感谢分享，向老师学习！可以让自己把Golang看得更加透彻！</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@chenjinxuan"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/chenjinxuan">chenjinxuan</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">9 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>谁都不服，就服你！书写的真的棒，非常非常有深度。</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@cafra"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/cafra">cafra</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">9 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/gabryzhong/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/gabryzhong">@gabryzhong</a><br> 刚刚开始使用go来提供一些webapi的服务，感觉go在设计业务层时过于面向过程了，使得代码段很难拆分干净
+													</p>
+												</blockquote>
+												<p>面向interface 编程，会是一个很好的软件组织形式</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@tw7613781"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/tw7613781">tw7613781</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬，你是我前进的明灯～感谢</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@vitoi"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/vitoi">vitoi</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>优秀</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@ROOKIE20570"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/ROOKIE20570">ROOKIE20570</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>感谢大佬的书！</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@racketprogram"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/racketprogram">racketprogram</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>理解常见并+发原语 Mutex</p>
+												<p>多了一個“+”</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>理解常见并+发原语 Mutex</p>
+													<p>多了一個“+”</p>
+												</blockquote>
+												<p>我怎么没找到这个错误</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@racketprogram"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/racketprogram">racketprogram</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+													</p>
+													<blockquote>
+														<p>理解常见并+发原语 Mutex</p>
+														<p>多了一個“+”</p>
+													</blockquote>
+													<p>我怎么没找到这个错误</p>
+												</blockquote>
+												<p>
+													<a rel="nofollow" href="https://ppt.cc/fZWOtx">https://ppt.cc/fZWOtx</a>
+												</p>
+												<hr>
+												<p><em>2020-05-29 UPDATES: 已修复</em></p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@lgting"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/lgting">lgting</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>开始接触学习go语言了， 走到这边是不是我已近成功了一半了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@ahwgs"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/ahwgs">ahwgs</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>学习了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@chacha923"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/chacha923">chacha923</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>可以写一些对常用的官方package源码分析啥的嘛</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>可以写一些对常用的官方package源码分析啥的嘛</p>
+												</blockquote>
+												<p>下面不是有标准库么</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@bspp1314"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/bspp1314">bspp1314</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>博主有出实体书打算吗？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">8 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>博主有出实体书打算吗？</p>
+												</blockquote>
+												<p>会出的</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@xiaolushare"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/xiaolushare">xiaolushare</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>膜拜大神, 希望出实体书</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@zhangxu-ai"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/zhangxu-ai">zhangxu-ai</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬，这本书打算出版吗？一定买来拜读！</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@brilliantGuo"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/brilliantGuo">brilliantGuo</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>膜拜大佬，学习了！</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@a1499418300"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/a1499418300">a1499418300</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/yinpeihao/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/yinpeihao">@yinpeihao</a>
+													</p>
+													<blockquote>
+														<p>
+															<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+														</p>
+														<blockquote>
+															<blockquote>
+																<p>
+																	<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+																</p>
+																<blockquote>
+																	<p>
+																		<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/wujunze/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/wujunze">@wujunze</a><br> nice
+																	</p>
+																</blockquote>
+																<p>你是怎么发现的..</p>
+															</blockquote>
+															<p>我也发现了</p>
+														</blockquote>
+														<p>昨天开放了...</p>
+													</blockquote>
+													<p>哈哈哈哈，德莱文流皮</p>
+												</blockquote>
+												<p>打卡</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Logic-Luo"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Logic-Luo">Logic-Luo</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>nice</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wangsquirrel"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wangsquirrel">wangsquirrel</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>赞一个
+													<g-emoji class="g-emoji" alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@raven-chen"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/raven-chen">raven-chen</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>写的真好 手动点赞！</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@antizhou"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/antizhou">antizhou</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>这个书针对怎样的群里，貌似不适合入门学习</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>这个书针对怎样的群里，貌似不适合入门学习</p>
+												</blockquote>
+												<p>如果没有编程基础，入门还是看 Go 语言圣经</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@ESWZY"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/ESWZY">ESWZY</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>虽然刚刚开始学Go，但是我觉得这本书一定会成为高阶程序员必读书！</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Eminlin"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Eminlin">Eminlin</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>很好的文章</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@jhon-von"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/jhon-von">jhon-von</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">7 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>大佬，学这个不知道能干啥，是不是学完就知道了呢？</p>
+												</blockquote>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@dillanzhou"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/dillanzhou">dillanzhou</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">6 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬，有个疑问，第一章呢？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">6 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>大佬，有个疑问，第一章呢？</p>
+												</blockquote>
+												<p>还没写呢</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@wcxhello2020"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/wcxhello2020">wcxhello2020</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">6 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>学习到无法自拔了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@alpha-baby"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/alpha-baby">alpha-baby</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">6 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>牛逼</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Jacob110"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Jacob110">Jacob110</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">6 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>牛逼，直接从第二章开始，哈哈哈</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@aladdinding"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/aladdinding">aladdinding</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">6 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>比一些卖课的讲的太好了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@sigma65535"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/sigma65535">sigma65535</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">5 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/a1499418300/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/a1499418300">@a1499418300</a>
+													</p>
+													<blockquote>
+														<p>
+															<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/yinpeihao/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/yinpeihao">@yinpeihao</a>
+														</p>
+														<blockquote>
+															<p>
+																<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+															</p>
+															<blockquote>
+																<blockquote>
+																	<p>
+																		<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/draveness/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/draveness">@draveness</a>
+																	</p>
+																	<blockquote>
+																		<p>
+																			<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/wujunze/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/wujunze">@wujunze</a><br> nice
+																		</p>
+																	</blockquote>
+																	<p>你是怎么发现的..</p>
+																</blockquote>
+																<p>我也发现了</p>
+															</blockquote>
+															<p>昨天开放了...</p>
+														</blockquote>
+														<p>哈哈哈哈，德莱文流皮</p>
+													</blockquote>
+													<p>打卡</p>
+												</blockquote>
+												<p>打卡+1</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@so2bin"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/so2bin">so2bin</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">4 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>** 写的很不错!**</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@huangwh2014"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/huangwh2014">huangwh2014</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">4 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>好书啊，我以为有纸质的，结果 没找一以，大神，出版一下啊，赚个辛苦费也可以啊</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@huangwh2014"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/huangwh2014">huangwh2014</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">4 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>我是刚go初学者，搜索切片与数组区别时就找到你这了，感觉很有用。</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@xiarong715"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/xiarong715">xiarong715</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">4 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>非常好</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@chenlixin93"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/chenlixin93">chenlixin93</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">3 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>向大佬学习的第一天</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@LiPenglin"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/LiPenglin">LiPenglin</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">3 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>居然没有纸质的<br> 确实是大佬
+													<br> 从内容到境界
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">3 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>居然没有纸质的</p>
+												</blockquote>
+												<p>之后会有的</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@handsomeyzz"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/handsomeyzz">handsomeyzz</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">3 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬回复我一下噻。看了您的文章我已经从入门到入土了......歪比歪比</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">3 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>大佬回复我一下噻。看了您的文章我已经从入门到入土了......歪比歪比</p>
+												</blockquote>
+												<p>回复你的什么？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Lightwing-Ng"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Lightwing-Ng">Lightwing-Ng</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">3 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>太强了</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@yuchanns"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/yuchanns">yuchanns</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>前几天在某个群听说这本书就快出实体了！大概什么时候呢？敲碗等一时间购买</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@love477"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/love477">love477</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬
+													<g-emoji class="g-emoji" alias="standing_man" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9cd-2642.png">🧍‍♂️</g-emoji>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@CyanChan"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/CyanChan">CyanChan</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>大佬有标准库源码解析的计划么</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment gt-comment-admin" style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@draveness"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/draveness">draveness</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>大佬有标准库源码解析的计划么</p>
+												</blockquote>
+												<p>最后一章会介绍部分标准库的源代码</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@2014BDuck"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/2014BDuck">2014BDuck</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>Shuqi大佬今年出书的计划有更新消息吗，1月份就看到人邮相关的预告了，不过2020年马上要过去了，想问问大佬实体书的安排有木有落地预计时间，一定支持几本~</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@sunnystitch"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/sunnystitch">sunnystitch</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>膜拜大佬 大佬如果出书可以给个签名版么 标准库源码解析什么的什么时候这块的博客有呀</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@icbd"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/icbd">icbd</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">大约 2 个月前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>作者的博客篇篇精品, 特别是 Golang 系列!</p>
+												<p>我在阅读的过程中想用荧光笔做高亮笔记, 一方面方便回顾, 也方便日后搜索, 于是就试着用 Golang 写了一个笔记工具:</p>
+												<p>
+													<a href="https://github.com/icbd/gohighlights">https://github.com/icbd/gohighlights</a>
+												</p>
+												<h2>Demo</h2>
+												<p>
+													<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/09fc7811a685566ce509f6a52a0a119e46c6ae6555e777b96462cdd438fa87f7/68747470733a2f2f73332e617831782e636f6d2f323032302f31322f31312f72416d7639412e706e67"><img src="https://camo.githubusercontent.com/09fc7811a685566ce509f6a52a0a119e46c6ae6555e777b96462cdd438fa87f7/68747470733a2f2f73332e617831782e636f6d2f323032302f31322f31312f72416d7639412e706e67" alt="demo" data-canonical-src="https://s3.ax1x.com/2020/12/11/rAmv9A.png" style="max-width:100%;"></a>
+												</p>
+												<p>
+													<a href="https://chrome.google.com/webstore/detail/go-highlights/homlcfpinafhealhlmjkmdjdejppmmlk" rel="nofollow">已经发布到 Chrome Extension Store, 欢迎下载试用</a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@changyonggang"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/changyonggang">changyonggang</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">19 天前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/icbd/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/icbd">@icbd</a><br> 作者的博客篇篇精品, 特别是 Golang 系列!</p>
+													<p>我在阅读的过程中想用荧光笔做高亮笔记, 一方面方便回顾, 也方便日后搜索, 于是就试着用 Golang 写了一个笔记工具:</p>
+													<p>
+														<a href="https://github.com/icbd/gohighlights">https://github.com/icbd/gohighlights</a>
+													</p>
+													<h2>Demo</h2>
+													<p>
+														<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/09fc7811a685566ce509f6a52a0a119e46c6ae6555e777b96462cdd438fa87f7/68747470733a2f2f73332e617831782e636f6d2f323032302f31322f31312f72416d7639412e706e67"><img src="https://camo.githubusercontent.com/09fc7811a685566ce509f6a52a0a119e46c6ae6555e777b96462cdd438fa87f7/68747470733a2f2f73332e617831782e636f6d2f323032302f31322f31312f72416d7639412e706e67" alt="demo" data-canonical-src="https://s3.ax1x.com/2020/12/11/rAmv9A.png" style="max-width:100%;"></a>
+													</p>
+													<p>
+														<a href="https://chrome.google.com/webstore/detail/go-highlights/homlcfpinafhealhlmjkmdjdejppmmlk" rel="nofollow">已经发布到 Chrome Extension Store, 欢迎下载试用</a>
+													</p>
+												</blockquote>
+												<p>大佬，这个插件的server 部署到了哪里？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@icbd"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/icbd">icbd</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">18 天前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<blockquote>
+													<p>
+														<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/changyonggang/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/changyonggang">@changyonggang</a>
+													</p>
+													<blockquote>
+														<p>
+															<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/icbd/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/icbd">@icbd</a><br> 作者的博客篇篇精品, 特别是 Golang 系列!</p>
+														<p>我在阅读的过程中想用荧光笔做高亮笔记, 一方面方便回顾, 也方便日后搜索, 于是就试着用 Golang 写了一个笔记工具:</p>
+														<p>
+															<a href="https://github.com/icbd/gohighlights">https://github.com/icbd/gohighlights</a>
+														</p>
+														<h2>Demo</h2>
+														<p>
+															<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/09fc7811a685566ce509f6a52a0a119e46c6ae6555e777b96462cdd438fa87f7/68747470733a2f2f73332e617831782e636f6d2f323032302f31322f31312f72416d7639412e706e67"><img src="https://camo.githubusercontent.com/09fc7811a685566ce509f6a52a0a119e46c6ae6555e777b96462cdd438fa87f7/68747470733a2f2f73332e617831782e636f6d2f323032302f31322f31312f72416d7639412e706e67" alt="demo" data-canonical-src="https://s3.ax1x.com/2020/12/11/rAmv9A.png" style="max-width:100%;"></a>
+														</p>
+														<p>
+															<a href="https://chrome.google.com/webstore/detail/go-highlights/homlcfpinafhealhlmjkmdjdejppmmlk" rel="nofollow">已经发布到 Chrome Extension Store, 欢迎下载试用</a>
+														</p>
+													</blockquote>
+													<p>大佬，这个插件的server 部署到了哪里？</p>
+												</blockquote>
+												<p>Chrome 商店的版本对应的 Server 在腾讯云, 由于域名备案失效了, 现在用的裸 IP
+													<g-emoji class="g-emoji" alias="joy" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png">😂</g-emoji>
+												</p>
+												<p>推荐使用本地独立部署, 代码开源在这里:</p>
+												<p>后端:
+													<a href="https://github.com/icbd/gohighlights">https://github.com/icbd/gohighlights</a>
+												</p>
+												<p>前端:
+													<a href="https://github.com/icbd/gohighlights_ext">https://github.com/icbd/gohighlights_ext</a>
+												</p>
+												<p>后端部署依赖 MySQL 和 Elasticsearch, 有问题可以给我发 issue .</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@Dcell"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/Dcell">Dcell</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">13 天前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>看了博主历史文章，这等自我驱动能力让我折服。<br> 我愿称你最强！坐等2020年总结
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@kichijyo"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/kichijyo">kichijyo</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">11 天前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>您好，我在编译静态库的时候，没有依据包来进行，而是直接针对源文件，进行的创建<br> 就像下面这样:
+													<br> 1.go build -o lib.a src/lib/greet.go<br> 2.go tool compile -I . src/main/main.go<br> 3.go tool link -L .main.o</p>
+												<p>main…inittask: relocation target lib…inittask not defined</p>
+												<p>我的源文件：</p>
+												<p>src/lib/greet.go</p>
+												<p>package lib<br> import “fmt”<br> func Greet(word string){<br> fmt.Print(word);
+													<br> }
+												</p>
+												<p>src/main/main.go</p>
+												<p>package main<br> import (<br> “lib”
+													<br> )
+													<br> func main(){<br> lib.Greet(“Okay”);
+													<br> }
+												</p>
+												<p>我想知道，为什么我基于源文件，进行就会报错呢？</p>
+											</div>
+										</div>
+									</div>
+									<div class="gt-comment " style="transform-origin: center top;">
+										<div class="gt-avatar gt-comment-avatar"><img src="https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg" alt="@jwdouble"></div>
+										<div class="gt-comment-content">
+											<div class="gt-comment-header">
+												<div class="gt-comment-block-1"></div>
+												<a class="gt-comment-username" href="https://github.com/jwdouble">jwdouble</a><span class="gt-comment-text">发表于</span><span class="gt-comment-date">5 天前</span>
+												<a class="gt-comment-reply" title="Reply"><span class="gt-ico gt-ico-reply"><span class="gt-svg"><svg viewBox="0 0 1332 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path>
+</svg>
+</span></span>
+												</a>
+											</div>
+											<div class="gt-comment-body markdown-body">
+												<p>卧槽，大佬超级大佬看了GC和内存管理那几章感觉通透了很多。太强了！</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="gt-comments-controls"><button class="gt-btn gt-btn-loadmore"><span class="gt-btn-text">加载更多</span></button></div>
+							</div>
+						</div>
+					</div>
+					<link href="https://cdn.staticfile.org/gitalk/1.6.2/gitalk.min.css" rel="stylesheet">
+					<script src="https://cdn.staticfile.org/gitalk/1.6.2/gitalk.min.js"></script>
+					<script>
+						var clientID = '9b9309114bace01e2a7e';
+						var clientSecret = '74e636d9c5ffbfeff0c5cdbe1471dce4eca75358';
+						const backupClientID = 'fb15638d6537ccdfb119';
+						const backupClientSecret = '086ccff07511c7c8e2a548b96fc47da8710ebbf1';
+						if(window.location.hostname == 'draven.co') {
+							clientID = backupClientID;
+							clientSecret = backupClientSecret;
+						}
+						var gitalk = new Gitalk({
+							clientID: clientID,
+							clientSecret: clientSecret,
+							repo: 'blog-comments',
+							owner: 'Draveness',
+							admin: ['Draveness'],
+							id: "\/golang",
+							distractionFreeMode: false,
+							perPage: 100
+						});
+						gitalk.render('gitalk-container')
+						if(typeof this.gitbook !== "undefined") {
+							this.gitbook.events.bind("page.change", function(e, config) {
+								gitalk.id = "\/golang"
+								gitalk.render('gitalk-container')
+							});
+						}
+					</script>
+					<script>
+						(function(i, s, o, g, r, a, m) {
+							i['GoogleAnalyticsObject'] = r;
+							i[r] = i[r] || function() {
+								(i[r].q = i[r].q || []).push(arguments)
+							}, i[r].l = 1 * new Date();
+							a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+							a.async = 1;
+							a.src = g;
+							m.parentNode.insertBefore(a, m)
+						})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+						ga('create', 'UA-56898419-1', 'auto');
+						ga('set', 'referrer', 'https://dive-deep-into-golang');
+						ga('send', {
+							hitType: 'pageview',
+							page: "\/golang",
+							source: 'a-sip-of-golang'
+						});
+					</script>
+					<script type="text/javascript" async="" src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+						MathJax.Hub.Config({
+							tex2jax: {
+								inlineMath: [
+									['$', '$'],
+									['\\(', '\\)']
+								],
+								displayMath: [
+									['$$', '$$']
+								],
+								processEscapes: true,
+								processEnvironments: true,
+								skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+								TeX: {
+									equationNumbers: {
+										autoNumber: "AMS"
+									},
+									extensions: ["AMSmath.js", "AMSsymbols.js"]
+								}
+							}
+						});
+						MathJax.Hub.Queue(function() {
+							var all = MathJax.Hub.getAllJax(),
+								i;
+							for(i = 0; i < all.length; i += 1) {
+								all[i].SourceElement().parentNode.className += ' has-jax';
+							}
+						});
+						MathJax.Hub.Config({
+							TeX: {
+								equationNumbers: {
+									autoNumber: "AMS"
+								}
+							}
+						});
+					</script>
+					<footer class="site-footer clearfix">
+						<style>
+							.site-footer {
+								position: relative;
+								margin: 1rem 0 0;
+								padding: 1rem 15px;
+								font-family: open sans, sans-serif;
+								font-size: 1rem;
+								line-height: 1.75em;
+								color: #bbc7cc
+							}
+							
+							.site-footer a {
+								color: #bbc7cc;
+								text-decoration: none;
+								font-weight: 700
+							}
+							
+							.site-footer a:hover {
+								border-bottom: #bbc7cc 1px solid
+							}
+							
+							.copyright {
+								display: block;
+								width: 100%;
+								float: left
+							}
+						</style>
+						<section class="copyright">
+							<a href="https://draveness.me">面向信仰编程</a> © 2014 - 2020 |
+							<a href="http://www.beian.miit.gov.cn" target="_blank">陕ICP备15004432号-2</a>
+						</section>
+					</footer>
+				</footer>
+				<div class="book-comments"></div><label for="menu-control" class="hidden book-menu-overlay"></label></div>
+			<aside class="book-toc">
+				<nav id="TableOfContents">
+					<ul>
+						<li>
+							<a href="#go-语言设计与实现">Go 语言设计与实现</a>
+							<ul>
+								<li>
+									<a href="#历史和现状">历史和现状</a>
+								</li>
+								<li>
+									<a href="#为什么要写这本书">为什么要写这本书</a>
+								</li>
+								<li>
+									<a href="#写作理念">写作理念</a>
+								</li>
+								<li>
+									<a href="#目标读者">目标读者</a>
+								</li>
+								<li>
+									<a href="#主要内容">主要内容</a>
+								</li>
+								<li>
+									<a href="#互动与勘误">互动与勘误</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+		</main>
+	</body>
+
+</html>

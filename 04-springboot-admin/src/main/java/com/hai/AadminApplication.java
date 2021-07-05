@@ -10,6 +10,7 @@ public class AadminApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AadminApplication.class, args);
+
     }
 
 }
