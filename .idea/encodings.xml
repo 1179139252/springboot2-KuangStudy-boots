@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/02-springboot-validator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/03-springboot-mybatis-plus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/04-springboot-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05-springboot-source/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-redis-string/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-result/src/main/java" charset="UTF-8" />
   </component>
 </project>

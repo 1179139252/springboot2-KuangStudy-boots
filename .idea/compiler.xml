@@ -7,13 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="04-springboot-admin" />
+        <module name="06-redis-string-02" />
+        <module name="03-springboot-mybatis-plus" />
         <module name="01-springboot-exception" />
         <module name="springboot-result" />
+        <module name="05-springboot-source" />
         <module name="02-springboot-validator" />
-        <module name="04-springboot-admin" />
-        <module name="03-springboot-mybatis-plus" />
+        <module name="06-redis-string" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="06-redis-string-02" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -21,6 +27,9 @@
       <module name="02-springboot-validator" options="-parameters" />
       <module name="03-springboot-mybatis-plus" options="-parameters" />
       <module name="04-springboot-admin" options="-parameters" />
+      <module name="05-springboot-source" options="-parameters" />
+      <module name="06-redis-string" options="-parameters" />
+      <module name="06-redis-string-02" options="-parameters" />
       <module name="springboot-result" options="-parameters" />
     </option>
   </component>

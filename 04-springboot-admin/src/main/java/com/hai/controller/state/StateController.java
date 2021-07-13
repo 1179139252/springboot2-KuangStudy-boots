@@ -8,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -61,6 +60,35 @@ public class StateController extends BaseController {
         modelMap.put("pages", page.getPages());
 
         return "/state/template";
+    }
+
+    /**
+     * 根据id进行删除
+     * @param id
+     * @return
+     */
+
+    @ResponseBody
+    @PostMapping("/state/del/{id}")
+    public Integer delState(@PathVariable("id") Integer id){
+        boolean b = stateIServicempl.removeById(id);
+
+        return b?1:0;
+    }
+
+
+
+    /**
+     * 根据id进行删除
+     * @param id
+     * @return
+     */
+
+    @ResponseBody
+    @PostMapping("/state/delete/{id}")
+    public Integer deletedState(@PathVariable("id") Integer id){
+        boolean b = stateIServicempl.removeById(id);
+        return b?1:0;
     }
 
 

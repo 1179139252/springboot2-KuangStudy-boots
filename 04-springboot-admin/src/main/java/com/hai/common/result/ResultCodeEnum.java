@@ -12,6 +12,7 @@ import lombok.Getter;
 @Getter
 public enum ResultCodeEnum {
     UNKNOWN_REASON(false, 20001, "未知错误"),
+    SESSION_TIMEOUT(false, 501, "您的会话已经超时,即将跳转到登录界面重新登录!"),
     SERVER_ERROR(false, 500, "服务器忙，请稍后在试"),
     ORDER_CREATE_FAIL(false, 601, "订单下单失败"),
     NICK_NAME_CHECK(false, 602, "参数非法不能为空"),

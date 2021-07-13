@@ -1,177 +1,73 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/job.css">
-	<div th:replace="~{common/header::scriptbar}"></div>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/job.css">
+    <div th:replace="~{common/header::scriptbar}"></div>
 
-	<style>
-		.bgpic{
-			background:url("http://p3.qhimg.com/bdr/__85/t0172ac83f1016ca2cb.jpg");
-			position:fixed;
-			top:0;
-			left:0;
-			bottom:0;
-			right:0;
-			filter:blur(3px);/*虚化功能*/
-			background-size:cover;
-		}
-	</style>
-	</head>
-	<body data-ext-version="3.1"><div class="odm_extension image_downloader_wrapper"><!----></div>
-		<div id="login" style="display: block;">
+    <style>
+        .bgpic {
+            background: url("http://p3.qhimg.com/bdr/__85/t0172ac83f1016ca2cb.jpg");
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            filter: blur(3px); /*虚化功能*/
+            background-size: cover;
+        }
+    </style>
+</head>
+<body data-ext-version="3.1" >
+<div class="odm_extension image_downloader_wrapper"><!----></div>
+<div id="login" style="display: block;">
 
 
-		<div class="pasttwo" style="">
-				<div class="l-logo l-top" style="margin-top:25px;">
-					<span style="font-size:32px;font-weight: bold;color: #666;position: relative;top:30px;">学相伴登录</span>
-				</div>
-				<div class="login-input i-pone">
-					<input type="text" id="nickname" value="admin" class="Phone-code-inp" placeholder="请输入账号">
-					<span class="l-yes" style="display:none;">✔</span>
-				</div>
-				<div class="login-input i-pone">
-					<input type="password" id="password" value="12345" class="Phone-code-inp" placeholder="请输入密码">
-					<span class="l-yes" style="display:none;">✔</span>
-				</div>
-				<div class="htiao" style="display:none">
-					<div class="login-input phone-info"><input type="text" class="Veri-code-inp" placeholder="短信验证码">
-						<span class="l-yes" style="display:none">✔</span>
-					</div>
-					<a class="get-yzm">获取短信验证码</a>
-				</div>
-				<div class="htia" id="kuangmessage" style="display: none">
-					<span class="l-no "  >X</span><span class="msg"></span>
+    <div class="pasttwo" style="">
+        <div class="l-logo l-top" style="margin-top:25px;">
+            <span style="font-size:32px;font-weight: bold;color: #666;position: relative;top:30px;">学相伴登录</span>
+        </div>
+        <div class="login-input i-pone">
+            <input type="text" id="nickname" value="admin" class="Phone-code-inp" placeholder="请输入账号">
+            <span class="l-yes" style="display:none;">✔</span>
+        </div>
+        <div class="login-input i-pone">
+            <input type="password" id="password" value="12345" class="Phone-code-inp" placeholder="请输入密码">
+            <span class="l-yes" style="display:none;">✔</span>
+        </div>
+        <div class="htiao" style="display:none">
+            <div class="login-input phone-info"><input type="text" class="Veri-code-inp" placeholder="短信验证码">
+                <span class="l-yes" style="display:none">✔</span>
+            </div>
+            <a class="get-yzm">获取短信验证码</a>
+        </div>
+        <div class="htia" id="kuangmessage" style="display: none">
+            <span class="l-no ">X</span><span class="msg"></span>
 
-				</div>
-				<a href="javascript:;" id="kuang-tologin" onkeydown="EnterCheck()"  class="alert-phone-longin loginname">登录</a>
+        </div>
+        <a href="javascript:;" id="kuang-tologin" onkeydown="EnterCheck()" class="alert-phone-longin loginname">登录</a>
 
-				<div class="diff-login">
-					<a href="javascript:;" class="phone-longin  wx-login" type="2" >
-					&lt; QQ微信<span class="loginname" >登录</span>
-					</a>
-					<a href="javascript:;" class="l-deal">注册或点击登录代表您同意《学相伴用户协议》</a>
-				</div>
-			</div>
-			<div class="l-left">
-				<div class="title">欢迎来到学相伴</div>
-				<ul>
-					<li><i class="i1"></i>海量精品文章，满足您的需求</li>
-					<li><i class="i2"></i>实用易修改，提升您的效率</li>
-					<li><i class="i3"></i>高质量精品热点内容每日更新</li>
-					<li><i class="i4"></i>专业客服接待，及时解决问题</li>
-				</ul>
-			</div>
-		</div>
-	<div class="bgpic"></div>
+        <div class="diff-login">
+            <a href="javascript:;" class="phone-longin  wx-login" type="2">
+                &lt; QQ微信<span class="loginname">登录</span>
+            </a>
+            <a href="javascript:;" class="l-deal">注册或点击登录代表您同意《学相伴用户协议》</a>
+        </div>
+    </div>
+    <div class="l-left">
+        <div class="title">欢迎来到学相伴</div>
+        <ul>
+            <li><i class="i1"></i>海量精品文章，满足您的需求</li>
+            <li><i class="i2"></i>实用易修改，提升您的效率</li>
+            <li><i class="i3"></i>高质量精品热点内容每日更新</li>
+            <li><i class="i4"></i>专业客服接待，及时解决问题</li>
+        </ul>
+    </div>
+</div>
+<div class="bgpic"></div>
+<div class="loginifarmeid" style="display: none">1</div>
 
 </body>
-<script>
-	var KungLogin = {
-		tip:function (msg) {
-			$("#kuangmessage").show().find(".msg").html(msg);
-			// 这个代码意思是：把上一次的定时器关闭，在去开新的。否则不关就会一直闪烁
-			if(this.stimer)clearTimeout(this.stimer);
-			this.stimer = setTimeout(function(){
-				$("#kuangmessage").hide();
-			},3000);
-		},
-
-		login:function () {
-			//给登录按钮绑定事件
-			$("#kuang-tologin").on("click",function () {
-				// 拿到登录用户名
-
-				var username = $("#nickname").val();
-				// 拿到用户密码
-				var password = $("#password").val();
-				console.log(username,password)
-				if (!username){
-					KungLogin.tip("你踏马账号不填登录个锤子！臭弟弟");
-					return;
-				}
-
-				if (!password){
-					KungLogin.tip("你踏马密码不填登录个锤子！臭弟弟");
-					return;
-				}
-
-
-				//  异步请求到后台
-				$.post("/admin/toLogin", {"nickname": username, "password": password},function (res) {
-					console.log(res);
-
-					// 状态402 用户密码不正确
-					if (res.code == 402){
-						$("#nickname").select();
-						$("#password").val("");
-						KungLogin.tip(res.message);
-						// 状态403 密码不正确
-					}else if (res.code == 403){
-						$("#password").val("").select();
-						KungLogin.tip(res.message);
-					//	状态500 服务器错误
-					}else if (res.code == 500){
-						KungLogin.tip(res.message);
-					}else if (res.code == 702){
-						KungLogin.tip(res.message);
-					}else if (res.code == 701){
-						KungLogin.tip(res.message);
-					}else {
-						window.location="/admin/index"
-					}
-				})
-
-			})
-		}
-
-	}
-
-	$(function (event) {
-		//初始化登录
-
-		KungLogin.login();
-		EnterCheck();
-	})
-
-	var EnterCheck = function (){
-
-		// 判断是否回车键 如果是登录
-		window.addEventListener("keydown", function (event) {
-			console.log(event.key);
-
-			if (event.key == "Enter"){
-				KungLogin.login();
-				$("#kuang-tologin").click();
-
-			}
-
-			if (event.defaultPrevented) {
-				return; // 如果已取消默认操作，则不应执行任何操作
-			}
-
-			var handled = false;
-			if (event.key !== undefined) {
-				// 使用KeyboardEvent.key处理事件，并将handled设置为true。
-			} else if (event.keyCode !== undefined) {
-				//使用KeyboardEvent.keyCode处理事件并将handled设置为true。
-			}
-
-			if (handled) {
-				// 如果事件已处理，则禁止“双重操作”
-				event.preventDefault();
-			}
-		}, true);
-
-
-	}
-
-
-
-
-
-</script>
-
 
 </html>

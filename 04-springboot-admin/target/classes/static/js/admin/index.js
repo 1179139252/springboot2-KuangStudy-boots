@@ -3,6 +3,8 @@ $(function(){
     ksdAside.init()
     // 2: 页面加载提示
     ksdLoading.init();
+    // $("#layui-layer-iframe5").remove();
+
 })
 
 
@@ -32,7 +34,7 @@ var ksdAside = {
             var href = $(this).data("href");
             // alert(href);
             $.get(href,function(res){
-                console.log(res)
+                // console.log(res)
                 $("#ksd-mainbox").html(res);
             })
             // $("#ksd-mainbox").load(href);

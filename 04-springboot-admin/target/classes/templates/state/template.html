@@ -10,7 +10,7 @@
     <div class="layui-tab-item layui-show">
         <div id="LAY_preview">
             <div class="layui-border-box">
-                <div class="layui-table-tool"><span class="mr-4 fl">我是统计首页</span>
+                <div class="layui-table-tool"><span class="mr-4 fl">统计：当前<span class="kuangnum"></span>条</span>
                     <div class="layui-table-tool-selfc ml-2 fr">
                         <a href="https://www.kuangstudy.com/bbs" target="_blank"
                            class="layui-btn layui-btn-sm"><span
@@ -53,6 +53,7 @@
                             <th>
                                 <div class="layui-table-cell"><span>状态</span></div>
                             </th>
+
                             <th>
                                 <div class="layui-table-cell"><span>结束时间</span></div>
                             </th>
@@ -65,7 +66,7 @@
                             </th>
                         </tr>
                         </thead>
-                        <tbody id="ksd-tbody" th:data-total="${total}" th:data-pages="${pages}" >
+                        <tbody id="ksd-tbody" th:data-total="${total}" th:data-pages="${pages}">
                         <!--                        引入list模板-->
                         <div th:replace="~{state/templatelist::pagelist}"></div>
 
@@ -98,7 +99,6 @@
                             that.loadData(currPage);
                         }
                     });
-
                 },
             );
 
@@ -106,10 +106,68 @@
 
         // 加载页面数据
         loadData: function (pageNo) {
-            $.get("/admin/state/list",{pageNo:pageNo},function (res){
+            $.get("/admin/state/list", {pageNo: pageNo}, function (res) {
 
-                var tbodyhtml =  $(res).find("#ksd-tbody").html();
+                var tbodyhtml = $(res).find("#ksd-tbody").html();
+                // 得到当前的total
+                // var total = $(res).html().data("total");
+                // console.log(total);
+                // console.log(tbodyhtml);
                 $("#ksd-tbody").html(tbodyhtml);
+
+            })
+
+        },
+
+        // 删除当前页面数据
+        delPage: function () {
+
+            // 在绑定父元素 为 父元素下面指定的子元素绑定点击事件
+            $("#ksd-tbody").on("click", ".kuang-del-button", function () {
+                // 拿到 id
+                var delid = $(this).data("delid");
+                var that = this
+                layui.use('layer', function () { //独立版的layer无需执行这一句
+                    //询问框
+                    layer.confirm('你确定不要我了吗？', {
+                        btn: ['确定', '取消'] //按钮
+                    }, function () {
+                        //    根据id进行删除
+
+                        request.post('/state/del/'+delid,function (isxhr) {
+                            if (isxhr.code == 200) {
+                                //移出当前的元素
+                                $(that).parents("tr").fadeOut("slow", function () {
+                                    $(this).remove();
+                                    layer.msg('删除成功咯~',{time:500}, {icon: 1});
+                                    var total = $("#ksd-tbody").data("total");
+                                    var result = total - 1;
+                                    // alert(result);
+                                    $("#ksd-tbody").data("total", result);
+                                    $(".kuangnum").text(result);
+                                    //    获得剩余元素对象的个数
+                                    var lengcount = $("#ksd-tbody").children().length;
+                                    if (lengcount == 0) {
+                                        var total = $("#ksd-tbody").data("total");
+
+                                        kuangState.page(total);
+                                    }
+                                })
+
+
+                        }})
+
+
+
+
+
+                    }, function () {
+                        layer.msg('取消');
+                    });
+
+
+                })
+
 
             })
 
@@ -120,9 +178,11 @@
     //初始化界面
     $(function () {
         var total = $("#ksd-tbody").data("total");
-        console.log(total);
+        // 页面显示总条数
+        $(".kuangnum").text(total);
         var pages = $("#ksd-tbody").data("pages");
         kuangState.page(total);
+        kuangState.delPage();
     })
 
 

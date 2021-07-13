@@ -27,10 +27,10 @@ public class State {
     private String endtime;
     // 统计的状态0未发布1发布
     private Integer status;
-    @TableField( fill = FieldFill.INSERT)
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
     // 更新时间
-    @TableField( fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
     // 创建者
     private Integer userid;
@@ -38,7 +38,9 @@ public class State {
     private String username;
     // 统计页面的背景图
     private String bgimg;
-
+    //  逻辑删除
+    @TableLogic
+    private Integer deleted;
 
 
 }

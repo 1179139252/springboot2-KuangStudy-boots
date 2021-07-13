@@ -85,5 +85,16 @@ public class R {
     }
 
 
+    public static R fail(ResultCodeEnum resultCodeEnum) {
+
+        R r = new R();
+        r.setCode(resultCodeEnum.getCode());
+        r.setData(null);
+        r.setMessage(resultCodeEnum.getMessage());
+        return r;
+
+    }
+
+
 
 }
