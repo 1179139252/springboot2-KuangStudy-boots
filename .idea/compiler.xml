@@ -13,6 +13,7 @@
         <module name="01-springboot-exception" />
         <module name="springboot-result" />
         <module name="05-springboot-source" />
+        <module name="07-redis-hash" />
         <module name="02-springboot-validator" />
         <module name="06-redis-string" />
       </profile>
@@ -30,6 +31,7 @@
       <module name="05-springboot-source" options="-parameters" />
       <module name="06-redis-string" options="-parameters" />
       <module name="06-redis-string-02" options="-parameters" />
+      <module name="07-redis-hash" options="-parameters" />
       <module name="springboot-result" options="-parameters" />
     </option>
   </component>

@@ -1,0 +1,761 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link type="text/css" rel="stylesheet" href="../../css/content.css"></link>
+    <script src="../../js/jquery-3.5.1.min.js" ></script>
+</head>
+
+<body id="activity-detail" th:data-contentid="${contentId}"
+      class="zh_CN wx_wap_page appmsg_desktop_fontsize_2 mm_appmsg discuss_tab appmsg_skin_default appmsg_style_default not_in_mm">
+<!-- <span style="color: red">currentVersion </span>
+        <div style="color:red;padding-left: 50px;">is IOS</div>
+                <span style="color: red">111</span>
+<span style="color: red">222170009FF</span> -->
+
+
+<div id="js_article" class="rich_media">
+
+    <div id="js_top_ad_area" class="top_banner"></div>
+
+    <div class="rich_media_inner">
+
+
+        <div id="page-content" class="rich_media_area_primary">
+
+            <div class="rich_media_area_primary_inner">
+
+
+                <div id="img-content" class="rich_media_wrp">
+
+                    <h2 class="rich_media_title" id="activity-name">
+
+
+                        官宣：Google 放弃 .apk
+                    </h2>
+                    <div id="meta_content" class="rich_media_meta_list">
+
+                                        <span class="rich_media_meta rich_media_meta_nickname" id="profileBt">
+                      <a href="javascript:void(0);" id="js_name">
+                        架构师专栏                      </a>
+                      <div id="js_profile_qrcode" class="profile_container" style="display:none;">
+                          <div class="profile_inner">
+                              <strong class="profile_nickname">架构师专栏</strong>
+                              <img class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
+
+                              <p class="profile_meta">
+                              <label class="profile_meta_label">微信号</label>
+                              <span class="profile_meta_value">tech_column</span>
+                              </p>
+
+                              <p class="profile_meta">
+                              <label class="profile_meta_label">功能介绍</label>
+                              <span class="profile_meta_value">专注原创，架构设计，Java后端、微服务、算法、技术栈</span>
+                              </p>
+
+                          </div>
+                          <span class="profile_arrow_wrp" id="js_profile_arrow_wrp">
+                              <i class="profile_arrow arrow_out"></i>
+                              <i class="profile_arrow arrow_in"></i>
+                          </span>
+                      </div>
+                    </span>
+                        <em id="publish_time" class="rich_media_meta rich_media_meta_text">昨天</em>
+                    </div>
+
+
+                    <div id="js_tags" class="article-tag__list" data-len="3">
+
+                        <div class="article-tag-card__title">收录于话题</div>
+                        <div class="article-tags">
+                            <div class="article-tag__item-wrp js_tag"
+                                 data-url="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NTM1NDgwNw==&amp;action=getalbum&amp;album_id=1811905105718214665#wechat_redirect"
+                                 data-tag_id="" data-album_id="1811905105718214665">
+                                <span class="article-tag__item">#架构进阶</span>
+                                <span class="article-tag__item-num">131</span>
+                            </div>
+                            <div class="article-tag__item-wrp js_tag"
+                                 data-url="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NTM1NDgwNw==&amp;action=getalbum&amp;album_id=1811895225280167936#wechat_redirect"
+                                 data-tag_id="" data-album_id="1811895225280167936">
+                                <span class="article-tag__item">#Java进阶</span>
+                                <span class="article-tag__item-num">62</span>
+                            </div>
+                            <div class="article-tag__item-wrp js_tag"
+                                 data-url="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NTM1NDgwNw==&amp;action=getalbum&amp;album_id=1810441912969920520#wechat_redirect"
+                                 data-tag_id="" data-album_id="1810441912969920520">
+                                <span class="article-tag__item">#当前浏览数</span>
+                                <span class="article-tag__item-num" id="kuangviews">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="rich_media_content " id="js_content" style="visibility: visible;">
+
+
+                        <p data-mpa-powered-by="yiban.io"><strong>大家好，我是磊哥。</strong></p>
+                        <section data-role="paragraph"
+                                 style="font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;white-space: normal;font-size: 16px;letter-spacing: 1px;background-color: rgb(255, 255, 255);">
+                            <section style="margin-right: 8px;margin-left: 8px;"><br></section>
+                        </section>
+                        <p style="margin-bottom: 20px;box-sizing: inherit;letter-spacing: 0.544px;white-space: normal;font-family: -apple-system, BlinkMacSystemFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;background-color: rgb(255, 255, 255);line-height: 2em;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 15px;letter-spacing: normal;">早在 2018 年 5 月的 Google I/O 大会上，Google 就介绍了 Android App Bundle（AAB）格式，作为其现代化开发的一部分。2021年 8 月，AAB 格式将成为全新上架到 Google Play Store 应用的默认格式，已经上架的老应用暂时不会受到影响。<br></span>
+                        </p>
+                        <p style="margin-bottom: 20px;box-sizing: inherit;letter-spacing: 0.544px;white-space: normal;font-family: -apple-system, BlinkMacSystemFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;background-color: rgb(255, 255, 255);line-height: 2em;margin-left: 0px;margin-right: 0px;text-align: center;">
+                            <img data-ratio="1.0254071661237785"
+                                 data-src="https://mmbiz.qpic.cn/mmbiz_png/Uv1mljB0iclQOGamZy83cVFS51qSpBudQWdicbbPHUP73a0RrFjddBa2PjE0shVDKibq9Fgx3okQwRrx3MOZHffOg/640?wx_fmt=png"
+                                 data-type="png" data-w="1535" height="820"
+                                 style="margin-right: auto; margin-left: auto; box-sizing: border-box; border-width: 0px; border-style: initial; border-color: initial; vertical-align: middle; cursor: zoom-in; visibility: visible !important; width: 177px !important; height: auto !important;"
+                                 width="832" _width="177px" class=""
+                                 src="https://mmbiz.qpic.cn/mmbiz_png/Uv1mljB0iclQOGamZy83cVFS51qSpBudQWdicbbPHUP73a0RrFjddBa2PjE0shVDKibq9Fgx3okQwRrx3MOZHffOg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"
+                                 crossorigin="anonymous" alt="图片" data-fail="0" title=""></p>
+                        <p style="margin-bottom: 20px;box-sizing: inherit;letter-spacing: 0.544px;white-space: normal;font-family: -apple-system, BlinkMacSystemFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;background-color: rgb(255, 255, 255);line-height: 2em;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 15px;letter-spacing: normal;">Google 在公告中表示：</span></p>
+                        <section data-mpa-template="t" mpa-from-tpl="t"
+                                 style="font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);">
+                            <section data-mpa-template="t" mpa-from-tpl="t">
+                                <blockquote mpa-from-tpl="t" style="color: rgba(0, 0, 0, 0.498);letter-spacing: 1px;"><p
+                                        style="margin-bottom: 20px;box-sizing: inherit;clear: both;min-height: 1em;color: rgb(51, 51, 51);font-size: 16px;line-height: 2em;letter-spacing: 1.5px;margin-left: 0px;margin-right: 0px;">
+                                    <span style="font-size: 15px;color: rgb(136, 136, 136);letter-spacing: normal;">为了给更多用户带来这些好处，并专注于能使所有开发者受益的现代化 Android 分发，Google Play 将从 2021 年 8 月开始要求新发布的应用程序以 Android App Bundle 的形式进行分发。这将取代 APK 作为标准发布格式。</span>
+                                </p></blockquote>
+                            </section>
+                        </section>
+                        <section
+                                style="margin-top: 5px;margin-bottom: 15px;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);font-size: 14px;white-space: pre-line;line-height: 30px;color: rgb(74, 74, 74);font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif;text-align: center;">
+                            <span style="color: rgb(0, 82, 255);"><strong><span
+                                    style="font-size: 20px;">注 意</span></strong></span><br></section>
+                        <section
+                                style="white-space: normal;letter-spacing: 0.544px;font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;background-color: rgb(255, 255, 255);text-align: center;">
+                            <span style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;font-size: 20px;background-color: rgb(255, 251, 0);color: rgb(0, 0, 0);"><strong>&nbsp;文末有：3625页互联网大厂面试题&nbsp;</strong></span>
+                        </section>
+                        <section
+                                style="white-space: normal;letter-spacing: 0.544px;font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;background-color: rgb(255, 255, 255);text-align: center;">
+                            <span style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;font-size: 20px;background-color: rgb(255, 251, 0);color: rgb(0, 0, 0);"><strong><br></strong></span>
+                        </section>
+                        <p style="margin-bottom: 20px;box-sizing: inherit;letter-spacing: 0.544px;white-space: normal;font-family: -apple-system, BlinkMacSystemFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;background-color: rgb(255, 255, 255);line-height: 2em;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 15px;letter-spacing: normal;">借助 AAB，Google Play 会基于用户设备的配置和语言，使下载到手机中的应用占用空间更小。这种优化意味着通过 AAB 分发的应用比传统 APK 格式平均占用空间少 15%。终端用户也能获得更快的安装速度和更多的可支配存储空间。以下是 AAB 格式的一些优势：</span><br>
+                        </p>
+                        <p style="margin-bottom: 20px;text-align: justify;line-height: 2em;"><span
+                                style="letter-spacing: normal;font-size: 14px;color: rgb(74, 74, 74);">1、Android App Bundle：Google Play 使用 App Bundle 来生成和优化 APK，以便针对不同的设备配置和语言进行分发。这使你的应用程序占用空间更少（平均比 APK 少 15%）；</span>
+                        </p>
+                        <p style="margin-bottom: 20px;text-align: justify;line-height: 2em;"><span
+                                style="letter-spacing: normal;font-size: 14px;color: rgb(74, 74, 74);"><span
+                                style="font-size: 14px;">2、</span>Play App Signing：Play App Signing 是 App Bundle 的必要条件，它通过使用 Google 的安全基础设施来保护应用程序签名密钥不会丢失，并提供了一个升级到全新的、加密能力更强的应用程序签名密钥的选项；</span>
+                        </p>
+                        <p style="margin-bottom: 20px;text-align: justify;line-height: 2em;"><span
+                                style="letter-spacing: normal;font-size: 14px;color: rgb(74, 74, 74);"><span
+                                style="font-size: 14px;">3、</span>Play Feature Delivery：Play Feature Delibery 使您能够通过安装时间、条件和按需交付模式，定制将哪些功能模块交付给哪个设备以及何时交付；</span>
+                        </p>
+                        <p style="margin-bottom: 20px;text-align: justify;line-height: 2em;"><span
+                                style="letter-spacing: normal;font-size: 14px;color: rgb(74, 74, 74);"><span
+                                style="font-size: 14px;">4、</span>Play Asset Delivery：通过动态交付大型资产，减少用户的等待时间，同时降低交付成本。使用 Play Asset Delivery 的游戏可以使用纹理压缩格式定位，因此你的用户只得到适合其设备的资产，没有浪费空间或带宽；</span>
+                        </p>
+                        <p style="margin-bottom: 20px;text-align: justify;line-height: 2em;"><span
+                                style="letter-spacing: normal;font-size: 14px;color: rgb(74, 74, 74);"><span
+                                style="font-size: 14px;">5、</span>未来的改进：很快，Play App Signing 将开始向选定的应用程序推出 APK Signature Scheme v4，使其有可能在较新的设备选择性地访问即将提供的 Android 性能功能；</span>
+                        </p>
+                        <section
+                                style="margin-bottom: 20px;box-sizing: inherit;letter-spacing: 0.544px;white-space: normal;font-family: -apple-system, BlinkMacSystemFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;background-color: rgb(255, 255, 255);line-height: 2em;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 15px;letter-spacing: normal;">根据 Google 的数据统计，目前已有超过 100 万个应用程序正在使用 AAB 格式。这囊括了大多数 Play Store 上排名前 1000 的应用和游戏，其中包括 Twitter、Netflix</span><span
+                                style="font-size: 15px;letter-spacing: 0.5px;">、Gameloft 旗下的游戏、Adobe 和 Duolingo 等。</span>
+                        </section>
+                        <p style="text-align: center;"><img class="rich_pages" data-galleryid=""
+                                                            data-ratio="0.4994652406417112" data-s="300,640"
+                                                            data-src="https://mmbiz.qpic.cn/mmbiz_png/GpcH5Yqqj0mfChKg7rZNjdo6FzVdibnziaT0AIzkjEh8z2nWaibEYNXxeic1VFDINTlSyL7jk2NibOGILpoqUnxxyyg/640?wx_fmt=png"
+                                                            data-type="png" data-w="935"
+                                                            style="width: 677px !important; height: auto !important; visibility: visible !important;"
+                                                            _width="677px"
+                                                            src="https://mmbiz.qpic.cn/mmbiz_png/GpcH5Yqqj0mfChKg7rZNjdo6FzVdibnziaT0AIzkjEh8z2nWaibEYNXxeic1VFDINTlSyL7jk2NibOGILpoqUnxxyyg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"
+                                                            crossorigin="anonymous" alt="图片" data-fail="0"></p>
+                        <section
+                                style="margin-bottom: 20px;box-sizing: inherit;letter-spacing: 0.544px;white-space: normal;font-family: -apple-system, BlinkMacSystemFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;background-color: rgb(255, 255, 255);line-height: 2em;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 15px;letter-spacing: 1px;">除了 APK 将被替换为新的 AAB 以外，开发者还需要用 Play Asset 或 Feature Delivery 替换大型扩展文件（OBB）。由于 AAB 支持 Android Instant App（即时应用程序），因此现有的即时应用 ZIP 也将被取代。目前已经上架 Play Store 的应用程序以及管理企业用户的专用应用程序暂时不会受到影响。</span><br>
+                        </section>
+                        <section
+                                style="font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;font-size: 16px;letter-spacing: 1px;white-space: normal;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 12px;font-family: Helvetica, Arial, sans-serif;color: rgb(0, 0, 0);">文 | Travis<br></span>
+                        </section>
+                        <section
+                                style="margin-bottom: 15px;font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;font-size: 16px;letter-spacing: 1px;white-space: normal;margin-left: 0px;margin-right: 0px;">
+                            <span style="font-size: 12px;font-family: Helvetica, Arial, sans-serif;color: rgb(0, 0, 0);">出品 | OSC开源社区（ID：oschina2013）</span>
+                        </section>
+                        <section data-tool="mdnice编辑器" data-website="https://www.mdnice.com"
+                                 style="max-width: 100%;white-space: normal;background-color: rgb(255, 255, 255);font-size: 16px;line-height: 1.6;letter-spacing: 0px;word-break: break-word;text-align: left;font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;color: rgb(74, 74, 74);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+                            <p data-tool="mdnice编辑器"
+                               style="padding-top: 8px;padding-bottom: 8px;max-width: 100%;min-height: 1em;line-height: 26px;font-size: 15px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+                                <strong style="max-width: 100%;word-spacing: 1px;color: rgb(0, 0, 0);font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif;font-size: 14px;letter-spacing: 1px;white-space: pre-line;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span
+                                        style="max-width: 100%;text-align: right;font-size: 20px;box-sizing: border-box !important;overflow-wrap: break-word !important;">近期技术热文</span></strong>
+                            </p></section>
+                        <section data-recommend-type="list-title" data-recommend-tid="8" data-mpa-template="t"
+                                 style="width: 100%;display: flex;justify-content: center;align-items: center;"
+                                 data-mid="" data-from="yb-recommend">
+                            <section
+                                    style="width: 100%;background: rgb(255, 255, 255);border-radius: 3px;border-width: 1px;border-style: solid;border-color: rgb(232, 232, 235);padding: 20px 14px;"
+                                    data-mid="">
+                                <section
+                                        style="width: 100%;display: flex;justify-content: center;align-items: center;align-items: flex-end;"
+                                        data-mid="">
+                                    <section
+                                            style="display: flex;justify-content: center;align-items: center;max-width: 100%;background: #fff;margin-bottom: -10px;z-index: 10;"
+                                            data-mid="">
+                                        <section
+                                                style="width: 10px;height: 10px;border-radius: 50%;border-width: 1px;border-style: solid;border-color: rgb(51, 51, 51);"
+                                                data-mid=""><br></section>
+                                        <section
+                                                style="margin: 0 8px;height: 20px;font-size: 14px;font-weight: 500;color: #333333;line-height: 20px;"
+                                                data-mid=""><p data-mid="">往期推荐</p></section>
+                                        <section
+                                                style="width: 10px;height: 10px;border-radius: 50%;border-width: 1px;border-style: solid;border-color: rgb(51, 51, 51);"
+                                                data-mid=""><br></section>
+                                    </section>
+                                </section>
+                                <section style="width: 100%;height: 1px;background: #333333;margin-bottom: 16px;"
+                                         data-mid=""><br></section>
+                                <section style="width: 100%;" data-mid="">
+                                    <section data-mpa-template="t" data-recommend-article-type="list-title"
+                                             data-recomment-template-id="8" data-recommend-article-id="2247493692_2"
+                                             data-recommend-article-time="1625445840"
+                                             data-recommend-article-cover="http://mmbiz.qpic.cn/mmbiz_jpg/GpcH5Yqqj0laySubSibkXiaI0Otdnj9KiceKTLWkysXyD4zjIXYeVtZWBfrV7kZqksHrhqqJO01cm1p63adPp6qBA/0?wx_fmt=jpeg"
+                                             data-recommend-article-title="IDEA 公司，又出新神器，一套代码适应多端！"
+                                             data-recommend-article-content-url="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493692&amp;idx=2&amp;sn=6f4fbb463411b8bfa32c9ffa437c0c9c&amp;chksm=ebefd664dc985f72d89579eac9e7a2c090968373e34caec8ecb8409e3a901577bbaf554c51ac#rd">
+                                        <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493692&amp;idx=2&amp;sn=6f4fbb463411b8bfa32c9ffa437c0c9c&amp;chksm=ebefd664dc985f72d89579eac9e7a2c090968373e34caec8ecb8409e3a901577bbaf554c51ac&amp;scene=21#wechat_redirect"
+                                           data-linktype="2">
+                                            <section data-recommend-title="t"
+                                                     style="width: 100%;background: #f5f5f5;display: flex;justify-content: center;align-items: center;flex-wrap: nowrap;padding: 6px 16px 6px;font-size: 13px;font-weight: 400;color: #333333;line-height: 18px;"
+                                                     data-mid=""><p
+                                                    style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;"
+                                                    data-mid="">IDEA 公司，又出新神器，一套代码适应多端！</p></section>
+                                        </a></section>
+                                    <section data-mpa-template="t" data-recommend-article-type="list-title"
+                                             data-recomment-template-id="8" data-recommend-article-id="2247493671_1"
+                                             data-recommend-article-time="1625400538"
+                                             data-recommend-article-cover="http://mmbiz.qpic.cn/mmbiz_jpg/GpcH5Yqqj0laySubSibkXiaI0Otdnj9Kice9MM65mfnSHLkJvX1tPicoJSrYS2mQWPU7FhhJ9s7nPPVTjZN9Ry7fPg/0?wx_fmt=jpeg"
+                                             data-recommend-article-title="换掉 SpringCloud，我用它！！！"
+                                             data-recommend-article-content-url="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493671&amp;idx=1&amp;sn=136a5ac6620272c58496e75c61de9441&amp;chksm=ebefd67fdc985f6995b2817b47462635a6aaba2070bd64e963b1a90f698ca214527a44a4a1e1#rd">
+                                        <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493671&amp;idx=1&amp;sn=136a5ac6620272c58496e75c61de9441&amp;chksm=ebefd67fdc985f6995b2817b47462635a6aaba2070bd64e963b1a90f698ca214527a44a4a1e1&amp;scene=21#wechat_redirect"
+                                           data-linktype="2">
+                                            <section data-recommend-title="t"
+                                                     style="width: 100%;display: flex;justify-content: center;align-items: center;flex-wrap: nowrap;padding: 6px 16px 6px;font-size: 13px;font-weight: 400;color: #333333;line-height: 18px;"
+                                                     data-mid=""><p
+                                                    style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;"
+                                                    data-mid="">换掉 SpringCloud，我用它！！！</p></section>
+                                        </a></section>
+                                    <section data-mpa-template="t" data-recommend-article-type="list-title"
+                                             data-recomment-template-id="8" data-recommend-article-id="2247493664_1"
+                                             data-recommend-article-time="1625314505"
+                                             data-recommend-article-cover="http://mmbiz.qpic.cn/mmbiz_jpg/GpcH5Yqqj0ngYQtrQ7s3gXWm1MLK1vGURcV4T9Qz4R3SxnCfTicrOib2ZziaicGKFS08Qa3FCicqDsQ7ytYGMUsvSBw/0?wx_fmt=jpeg"
+                                             data-recommend-article-title="再见 for 循环编程，白嫖，大型分布式电商系统，真香！"
+                                             data-recommend-article-content-url="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493664&amp;idx=1&amp;sn=fc3663faed695e2bfdc96576ca9e0a46&amp;chksm=ebefd678dc985f6e3b02bd04ff68dcd31609dc8dd9bf4ac652a89b7661f677efb9abcdfbff77#rd">
+                                        <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493664&amp;idx=1&amp;sn=fc3663faed695e2bfdc96576ca9e0a46&amp;chksm=ebefd678dc985f6e3b02bd04ff68dcd31609dc8dd9bf4ac652a89b7661f677efb9abcdfbff77&amp;scene=21#wechat_redirect"
+                                           data-linktype="2">
+                                            <section data-recommend-title="t"
+                                                     style="width: 100%;background: #f5f5f5;display: flex;justify-content: center;align-items: center;flex-wrap: nowrap;padding: 6px 16px 6px;font-size: 13px;font-weight: 400;color: #333333;line-height: 18px;"
+                                                     data-mid=""><p
+                                                    style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;"
+                                                    data-mid="">再见 for 循环编程，白嫖，大型分布式电商系统，真香！</p></section>
+                                        </a></section>
+                                    <section data-mpa-template="t" data-recommend-article-type="list-title"
+                                             data-recomment-template-id="8" data-recommend-article-id="2247493661_2"
+                                             data-recommend-article-time="1625186640"
+                                             data-recommend-article-cover="http://mmbiz.qpic.cn/mmbiz_jpg/GpcH5Yqqj0ns1PkicibUqHSwGoGJXCwdpw3J20nZNVGl5icI8Qo9GPib4G6S5hKtibwvXOYnMehI5zcSQccJrSWjhHQ/0?wx_fmt=jpeg"
+                                             data-recommend-article-title="19 个接私活平台，你有技术，就有钱！"
+                                             data-recommend-article-content-url="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493661&amp;idx=2&amp;sn=687a3d0eb7abe94d9540a454075ccf1e&amp;chksm=ebefd645dc985f532b6d08da5f86fd26e8257fdc58ade878dc6b624bf959576cd2c167f14533#rd">
+                                        <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493661&amp;idx=2&amp;sn=687a3d0eb7abe94d9540a454075ccf1e&amp;chksm=ebefd645dc985f532b6d08da5f86fd26e8257fdc58ade878dc6b624bf959576cd2c167f14533&amp;scene=21#wechat_redirect"
+                                           data-linktype="2">
+                                            <section data-recommend-title="t"
+                                                     style="width: 100%;display: flex;justify-content: center;align-items: center;flex-wrap: nowrap;padding: 6px 16px 6px;font-size: 13px;font-weight: 400;color: #333333;line-height: 18px;border-bottom:none !important;"
+                                                     data-mid=""><p
+                                                    style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;"
+                                                    data-mid="">19 个接私活平台，你有技术，就有钱！</p></section>
+                                        </a></section>
+                                </section>
+                            </section>
+                        </section>
+                        <p><br></p>
+                        <p style="max-width: 100%;min-height: 1em;font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;letter-spacing: 0.544px;white-space: normal;font-size: 16px;text-align: left;color: rgb(63, 63, 63);word-spacing: 1px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+                            <a target="_blank"
+                               href="https://mp.weixin.qq.com/s?__biz=MzA3MTUzOTcxOQ==&amp;mid=2452981393&amp;idx=2&amp;sn=9c0005ed9e5119eef7183eb25db0edee&amp;scene=21#wechat_redirect"
+                               textvalue="第3版：互联网大厂面试题包括 Java 集合、JVM、多线程、并发编程、设计模式、算法调优、Spring全家桶、Java、MyBatis、ZooKeeper、Dubbo、Elasticsearch、Memcached、MongoDB、Redis、MySQL、RabbitMQ、Kafka、Linux、Netty、Tomcat、Python、HTML、CSS、Vue、React、JavaScript、Android 大数据、阿里巴巴等大厂面试题等、等技术栈！阅读原文：&nbsp;高清&nbsp;7701页大厂面试题&nbsp; PDF"
+                               tab="innerlink" data-linktype="2"
+                               style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong
+                                    style="max-width: 100%;letter-spacing: 0.544px;font-size: 13px;color: rgb(255, 41, 65);box-sizing: border-box !important;overflow-wrap: break-word !important;"><span
+                                    style="max-width: 100%;font-size: 20px;box-sizing: border-box !important;overflow-wrap: break-word !important;">第3版：互联网大厂面试题</span></strong><br
+                                    style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"></a>
+                        </p>
+                        <p style="max-width: 100%;min-height: 1em;font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;letter-spacing: 0.544px;white-space: normal;font-size: 16px;text-align: left;color: rgb(63, 63, 63);word-spacing: 1px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+                            <a target="_blank"
+                               href="https://mp.weixin.qq.com/s?__biz=MzA3MTUzOTcxOQ==&amp;mid=2452981393&amp;idx=2&amp;sn=9c0005ed9e5119eef7183eb25db0edee&amp;scene=21#wechat_redirect"
+                               textvalue="第3版：互联网大厂面试题包括 Java 集合、JVM、多线程、并发编程、设计模式、算法调优、Spring全家桶、Java、MyBatis、ZooKeeper、Dubbo、Elasticsearch、Memcached、MongoDB、Redis、MySQL、RabbitMQ、Kafka、Linux、Netty、Tomcat、Python、HTML、CSS、Vue、React、JavaScript、Android 大数据、阿里巴巴等大厂面试题等、等技术栈！阅读原文：&nbsp;高清&nbsp;7701页大厂面试题&nbsp; PDF"
+                               tab="innerlink" data-linktype="2"
+                               style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span
+                                    style="max-width: 100%;color: rgb(136, 136, 136);font-size: 13px;box-sizing: border-box !important;overflow-wrap: break-word !important;">包括 Java 集合、JVM、多线程、并发编程、设计模式、算法调优、Spring全家桶、Java、MyBatis、ZooKeeper、Dubbo、Elasticsearch、Memcached、MongoDB、Redis、MySQL、RabbitMQ、Kafka、Linux、Netty、Tomcat、Python、HTML、CSS、Vue、React、JavaScript、Android 大数据、阿里巴巴等大厂面试题等、等技术栈！</span><br
+                                    style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"></a>
+                        </p>
+                        <p style="margin-top: 5px;margin-bottom: 5px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(74, 74, 74);word-spacing: 1px;background-color: rgb(255, 255, 255);font-size: 14px;white-space: pre-line;line-height: 30px;font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif;text-align: start;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+                            <a target="_blank"
+                               href="https://mp.weixin.qq.com/s?__biz=MzA3MTUzOTcxOQ==&amp;mid=2452981393&amp;idx=2&amp;sn=9c0005ed9e5119eef7183eb25db0edee&amp;scene=21#wechat_redirect"
+                               textvalue="第3版：互联网大厂面试题包括 Java 集合、JVM、多线程、并发编程、设计模式、算法调优、Spring全家桶、Java、MyBatis、ZooKeeper、Dubbo、Elasticsearch、Memcached、MongoDB、Redis、MySQL、RabbitMQ、Kafka、Linux、Netty、Tomcat、Python、HTML、CSS、Vue、React、JavaScript、Android 大数据、阿里巴巴等大厂面试题等、等技术栈！阅读原文：&nbsp;高清&nbsp;7701页大厂面试题&nbsp; PDF"
+                               tab="innerlink" data-linktype="2"
+                               style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span
+                                    style="max-width: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;color: rgb(255, 41, 65);letter-spacing: normal;font-size: 18px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong
+                                    style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">阅读原文：</strong></span><span
+                                    style="max-width: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;color: rgb(0, 0, 0);letter-spacing: 0.544px;background-color: rgb(255, 251, 0);font-size: 18px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong
+                                    style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">&nbsp;高清</strong><strong
+                                    style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">&nbsp;7701页大厂面试题&nbsp; PDF</strong></span></a>
+                        </p>
+                    </div>
+
+                    <script nonce="" type="text/javascript">
+                        var first_sceen__time = (+new Date());
+
+                        if ("" == 1 && document.getElementById('js_content')) {
+                            document.getElementById('js_content').addEventListener("selectstart", function (e) {
+                                e.preventDefault();
+                            });
+                        }
+
+
+                    </script>
+
+
+                    <div id="js_sponsor_ad_area" style="display: none;"></div>
+
+
+                    <div class="read-more__area" id="js_more_read_area" style="display:none;">
+
+                    </div>
+
+
+                </div>
+                <div id="js_tags_preview_toast" class="article-tag__error-tips" style="display: none;">预览时标签不可点</div>
+
+                <ul id="js_hotspot_area" class="article_extend_area"></ul>
+
+
+                <div id="js_album_keep_read" class="appmsg_card_context album_read_card" style="display: block;">
+                    <div class="album_read_hd weui-flex" id="js_album_directory">
+                        <div class="album_read_source"><span>收录于话题 </span><span>#<span id="js_album_keep_read_title">架构进阶</span></span>
+                        </div>
+                        <span class="weui-btn__word-wrp"><span id="js_album_keep_read_size">131</span>个<i
+                                class="weui_right_arrow"></i></span>
+                    </div>
+                    <div class="album_read_bd weui-flex">
+                  <span class="album_read_nav_item album_read_nav_prev weui-flex__item" id="js_album_prev">
+                    <span class="album_read_nav_inner">
+                      <span class="album_read_nav_btn">上一篇</span>
+                      <span class="album_read_nav_title" id="js_album_keep_read_pre_title">面试难题：String长度有限制吗？是多少？</span>
+                    </span>
+                  </span>
+                        <span class="album_read_nav_item album_read_nav_next weui-flex__item" id="js_album_next">
+                    <span class="album_read_nav_inner">
+                      <span class="album_read_nav_btn">下一篇</span>
+                      <span class="album_read_nav_title"
+                            id="js_album_keep_read_next_title">IDEA 公司，又出新神器，一套代码适应多端！</span>
+                    </span>
+                  </span>
+                    </div>
+                </div>
+
+
+                <div class="rich_media_tool" id="js_toobar3">
+                    <div class="weui-flex">
+                        <div class="weui-flex__item">
+
+
+                            <a class="media_tool_meta meta_primary" id="js_view_source" href="##">阅读原文</a>
+
+                            <div id="js_read_area3" role="option"
+                                 class="media_tool_meta tips_global_primary meta_primary" style="display:none;">
+                                <span id="readTxt">阅读</span>
+                                <span id="readNum3"></span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="weui-flex sns_opr_area" id="js_bottom_opr_right" style="display: none;">
+                        <div class="weui-flex__item">
+
+      <span style="display: none;" class="media_tool_meta meta_primary meta_share js_media_tool_meta"
+            id="js_bottom_share">
+        <button class="sns_opr_btn sns_share_btn" id="js_bottom_share_btn"><span class="sns_opr_gap">分享</span></button>
+      </span>
+
+
+                            <span style="display: none;"
+                                  class="media_tool_meta meta_primary meta_collect js_media_tool_meta"
+                                  id="js_bottom_collect">
+        <button class="sns_opr_btn sns_collect_btn" id="js_bottom_collect_btn"><span
+                class="sns_opr_gap">收藏</span></button>
+      </span>
+                        </div>
+
+
+                        <span style="display:none;" class="media_tool_meta meta_extra meta_praise js_media_tool_meta"
+                              id="like_old">
+      <button class="sns_opr_btn sns_praise_btn" id="js_bottom_zan_btn"><span class="sns_opr_gap"
+                                                                              id="js_parise_wording">赞</span><span
+              class="sns_opr_num sns_opr_gap" id="likeNum_old" style="display: none;"></span></button>
+    </span>
+
+
+                        <span style="display:none;" class="media_tool_meta meta_extra meta_like js_media_tool_meta"
+                              id="like3">
+
+      <button class="sns_opr_btn sns_like_btn" id="js_like_btn"><span class="sns_opr_gap" id="js_like_wording">在看</span><span
+              class="sns_opr_num sns_opr_gap" id="likeNum3"></span></button>
+    </span>
+                    </div>
+                </div>
+
+                <div class="like_comment_wrp" id="js_like_comment" style="display: none;">
+                    <div class="like_comment_inner">
+                        <div class="like_comment_hd" style="display:none" id="js_like_title"></div>
+                        <div class="like_comment_bd">
+                            <div class="like_comment_tips" id="js_comment_area">
+                                <i class="weui-icon-success"></i><i class="icon-success-primary"></i>已同步到看一看<a
+                                    href="javascript:;" class="like_comment_share_link" id="js_like_comment_share">写下你的想法</a>
+                            </div>
+                            <div class="like_comment_extra_info" id="js_like_educate" style="display: none">
+                                <p class="like_comment_extra_tips">
+                                    <span id="js_friend_like_area" style="display: none"></span>
+                                    <span id="js_friend_like_word">前往“发现”-“看一看”浏览“朋友在看”</span>
+                                </p>
+                                <p class="like_comment_pic_wrp">
+                                    <img class="like_comment_pic"
+                                         src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/appmsg/pic_like_comment55871f.png">
+                                </p>
+                                <button class="weui-btn weui-btn_primary" id="js_go_wow">前往看一看</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none;" id="wow_close_inform">
+                    <div class="weui-mask"></div>
+                    <div class="weui-dialog">
+                        <div class="weui-dialog__hd"><strong class="weui-dialog__title">看一看入口已关闭</strong></div>
+                        <div class="weui-dialog__bd">
+                            在“设置”-“通用”-“发现页管理”打开“看一看”入口
+                        </div>
+                        <div class="weui-dialog__ft" id="wow_close_ack">
+                            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">我知道了</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="js_like_toast" style="display: none;">
+                    <div class="weui-mask_transparent"></div>
+                    <div class="weui-toast">
+                        <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+                        <p class="weui-toast__content" id="js_toast_msg">已发送</p>
+                    </div>
+                </div>
+
+                <div style="display: none;" id="js_comment_panel">
+                    <div class="like_comment_primary_wrp editing" id="js_comment_wrp">
+                        <div class="like_comment_primary_inner">
+                            <div class="like_comment_primary_hd">
+                                <div class="like_comment_primary_hd_side">
+                                    <button class="like_comment_primary_cancel" id="js_comment_cancel">
+                                        取消 <i class="weui-icon-close-thin"></i>
+                                    </button>
+                                </div>
+                                <h4 class="like_comment_primary_title"> 发送到看一看 </h4>
+                                <div class="like_comment_primary_hd_side">
+                                    <button class="like_comment_primary_btn" id="js_comment_confirm"
+                                            disabled="disabled">发送
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="like_comment_primary_bd">
+                                <div class="like_comment_media_title" id="js_panel_like_title">
+                                    官宣：Google 放弃 .apk
+                                </div>
+                                <div class="like_comment_textarea_wrp">
+                                    <textarea class="like_comment_textarea weui-textarea" placeholder="写下你的想法..."
+                                              id="js_comment_text"></textarea>
+                                </div>
+                            </div>
+                            <span class="like_comment_msg" id="js_like_comment_msg" style="visibility: hidden;">最多200字，当前共<span
+                                    id="js_like_current_cnt"></span>字</span>
+                        </div>
+                    </div>
+                    <div class="like_comment_primary_mask" id="js_mask_2"></div>
+                </div>
+
+                <div id="js_loading" style="display: none;">
+                    <div class="weui-mask_transparent"></div>
+                    <div class="weui-toast">
+                        <i class="weui-loading weui-icon_toast"></i>
+                        <p class="weui-toast__content">发送中</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="rich_media_area_primary sougou" id="sg_tj" style="display:none"></div>
+
+
+        <div class="rich_media_area_extra">
+            <div class="rich_media_area_extra_inner">
+
+                <div class="wx_follow_container" id="js_like_profile_container"></div>
+
+                <div class="related_container" id="js_related_container">
+                    <div class="relate_mod_transition function_mod js_related_area"
+                         style="opacity: 1; overflow: visible; height: 21.5625em; margin: 12px 0px; transition: none 0s ease 0s;">
+                        <div class="function_mod_index js_related_main">
+                            <div class="function_hd js_related_title">          <!-- 其它 -->           喜欢此内容的人还喜欢</div>
+                            <div class="function_bd">
+                                <div class="relate_article_index_list relate_article_list js_related_list"
+                                     style="height: auto; opacity: 1;"><a href="javascript:void(0);"
+                                                                          class="weui-media-box weui-media-box_appmsg js_related_item"
+                                                                          data-index="0"
+                                                                          data-url="http://mp.weixin.qq.com/s?__biz=MzI4NTM1NDgwNw==&amp;mid=2247493275&amp;idx=2&amp;sn=0a6623714738eac30b19ab991bdab63d&amp;chksm=ebefd8c3dc9851d55826fd1895e7ca3bd7d1ef16dd06ab63a88e681bce01b2974fef711ee759&amp;scene=132#wechat_redirect"
+                                                                          data-time="1624322640" data-recalltype="1006"
+                                                                          data-isreaded="0" data-bizuin="3285354807"
+                                                                          data-mid="2247493275" data-idx="2"
+                                                                          data-item_show_type="0"
+                                                                          data-exptype="unsubscribed_card_0_article_relatedread_0_#1_level1"
+                                                                          data-ext_info="{&amp;quot;rec_info&amp;quot;:{&amp;quot;model_id&amp;quot;:0}}"
+                                                                          data-hasreport="1">
+                                    <div class="weui-media-box__bd">
+                                        <div class="ellipsis_relate_title weui_ellipsis_mod_wrp                    relate_article_default                ">
+                                            <div class="weui_ellipsis_mod">
+                                                <div class="weui_ellipsis_mod_inner"> 没想到，注册中心，Eureka 比 Zookeeper 牛逼？
+                                                </div>
+                                            </div>
+                                            <div class="weui_ellipsis_fake_mod">
+                                                <div class="weui_ellipsis_fake_inner"> 没想到，注册中心，Eureka 比 Zookeeper 牛逼？
+                                                </div>
+                                                <div class="weui_ellipsis_fake_placeholder"></div>
+                                                <div class="weui_ellipsis_fake_extra">...</div>
+                                            </div>
+                                        </div>
+                                        <div class="weui-media-box__info">
+                                            <div class="weui-media-box__info__inner">
+                                                <div class="weui-media-box__info__meta"></div>
+                                                <div class="js_profile relate_profile relate_article_panel_active"
+                                                     data-username="gh_662bb61dcc68">
+                                                    <div class="weui-media-box__info__meta"><span
+                                                            class="relate_profile_nickname">                 架构师专栏               </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relate_article_opr">
+                                                <button type="button" class="reset_btn dislike_btn js_feedback_btn">
+                                                    不喜欢
+                                                </button>
+                                            </div><!-- 去掉display:none;改用样式默认隐藏，加classnamme:feedback_dialog_show显示 -->
+                                            <div class="feedback_dialog_wrp js_feedback_dialog">
+                                                <div class="weui-mask js_mask"></div>
+                                                <!-- 底部时弹窗向上，加.feedback_dialog_pos_top -->
+                                                <div class="feedback_dialog js_dialog_wrp">
+                                                    <div class="feedback_dialog_hd weui-flex">
+                                                        <div class="weui-flex__item feedback_dialog_title">不看的原因</div>
+                                                        <button type="button"
+                                                                class="weui-btn weui-btn_primary weui-btn_mini weui-btn_disabled js_submit">
+                                                            确定
+                                                        </button>
+                                                    </div>
+                                                    <div class="feedback_dialog_bd">
+                                                        <ul class="feedback_tag_list">
+                                                            <!-- 选中时tag加.feedback_tag_selected -->
+                                                            <li class="feedback_tag_item js_reason js_tag_item"
+                                                                data-value="1">内容质量低
+                                                            </li>
+                                                            <li class="feedback_tag_item js_reason js_tag_item"
+                                                                data-value="2">不看此公众号
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weui-media-box__ft"
+                                         style="background-image:url(https://mmbiz.qlogo.cn/mmbiz_jpg/GpcH5Yqqj0kVoENkaYIkGB2ComEOgkbQ8KBN6O4v2bZudj2dCQaFjclE3LRncks16fMSQjy6Y8F0jvrJMwmEmw/0?wx_fmt=jpeg)"></div>
+                                </a> <a href="javascript:void(0);"
+                                        class="weui-media-box weui-media-box_appmsg js_related_item" data-index="1"
+                                        data-url="http://mp.weixin.qq.com/s?__biz=MzI4NTkzODY0Mg==&amp;mid=2247489482&amp;idx=1&amp;sn=fdfb3a195e853154935a270476e02e94&amp;chksm=ebe5d177dc9258613590f32d47ecf915ca2fdcbc1cb17789bf7a8da2593105c2921df088b1bf&amp;scene=132#wechat_redirect"
+                                        data-time="1623924000" data-recalltype="1006" data-isreaded="0"
+                                        data-bizuin="3285938642" data-mid="2247489482" data-idx="1"
+                                        data-item_show_type="0"
+                                        data-exptype="unsubscribed_card_0_article_relatedread_0_#1_level1"
+                                        data-ext_info="{&amp;quot;rec_info&amp;quot;:{&amp;quot;model_id&amp;quot;:0}}"
+                                        data-hasreport="1">
+                                    <div class="weui-media-box__bd">
+                                        <div class="ellipsis_relate_title weui_ellipsis_mod_wrp                    relate_article_default                ">
+                                            <div class="weui_ellipsis_mod">
+                                                <div class="weui_ellipsis_mod_inner"> MySQL 自增ID 超大问题查询</div>
+                                            </div>
+                                            <div class="weui_ellipsis_fake_mod">
+                                                <div class="weui_ellipsis_fake_inner"> MySQL 自增ID 超大问题查询</div>
+                                                <div class="weui_ellipsis_fake_placeholder"></div>
+                                                <div class="weui_ellipsis_fake_extra">...</div>
+                                            </div>
+                                        </div>
+                                        <div class="weui-media-box__info">
+                                            <div class="weui-media-box__info__inner">
+                                                <div class="weui-media-box__info__meta"></div>
+                                                <div class="js_profile relate_profile relate_article_panel_active"
+                                                     data-username="gh_2349961eebc9">
+                                                    <div class="weui-media-box__info__meta"><span
+                                                            class="relate_profile_nickname">                 大数据云技术               </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relate_article_opr">
+                                                <button type="button" class="reset_btn dislike_btn js_feedback_btn">
+                                                    不喜欢
+                                                </button>
+                                            </div><!-- 去掉display:none;改用样式默认隐藏，加classnamme:feedback_dialog_show显示 -->
+                                            <div class="feedback_dialog_wrp js_feedback_dialog">
+                                                <div class="weui-mask js_mask"></div>
+                                                <!-- 底部时弹窗向上，加.feedback_dialog_pos_top -->
+                                                <div class="feedback_dialog js_dialog_wrp">
+                                                    <div class="feedback_dialog_hd weui-flex">
+                                                        <div class="weui-flex__item feedback_dialog_title">不看的原因</div>
+                                                        <button type="button"
+                                                                class="weui-btn weui-btn_primary weui-btn_mini weui-btn_disabled js_submit">
+                                                            确定
+                                                        </button>
+                                                    </div>
+                                                    <div class="feedback_dialog_bd">
+                                                        <ul class="feedback_tag_list">
+                                                            <!-- 选中时tag加.feedback_tag_selected -->
+                                                            <li class="feedback_tag_item js_reason js_tag_item"
+                                                                data-value="1">内容质量低
+                                                            </li>
+                                                            <li class="feedback_tag_item js_reason js_tag_item"
+                                                                data-value="2">不看此公众号
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weui-media-box__ft"
+                                         style="background-image:url(https://mmbiz.qlogo.cn/mmbiz_jpg/icbViakEeV5qHgg0YSIj3A1U1MImtXzXn6wty0ucibmI4d2Xxu5KbicCKtZJ7DzcocwCyfaCufCUicrpmFNwAsib10lg/0?wx_fmt=jpeg)"></div>
+                                </a> <a href="javascript:void(0);"
+                                        class="weui-media-box weui-media-box_appmsg js_related_item" data-index="2"
+                                        data-url="http://mp.weixin.qq.com/s?__biz=MzAxMzgxMjIxNg==&amp;mid=2651358578&amp;idx=3&amp;sn=a5ab8a2c15edaf9360515c6037194a8c&amp;chksm=8060cde5b71744f3d300a4fce4f9be198bd2135b335d5b993a12183503301b1a6997d31a160d&amp;scene=132#wechat_redirect"
+                                        data-time="1625439600" data-recalltype="1006" data-isreaded="0"
+                                        data-bizuin="3013812216" data-mid="2651358578" data-idx="3"
+                                        data-item_show_type="0"
+                                        data-exptype="unsubscribed_card_0_article_relatedread_0_#1_level1"
+                                        data-ext_info="{&amp;quot;rec_info&amp;quot;:{&amp;quot;model_id&amp;quot;:0}}"
+                                        data-hasreport="1">
+                                    <div class="weui-media-box__bd">
+                                        <div class="ellipsis_relate_title weui_ellipsis_mod_wrp                    relate_article_default                ">
+                                            <div class="weui_ellipsis_mod">
+                                                <div class="weui_ellipsis_mod_inner"> 了解交换机：级联、端口聚合、堆叠、分层的四种网络结构方式</div>
+                                            </div>
+                                            <div class="weui_ellipsis_fake_mod">
+                                                <div class="weui_ellipsis_fake_inner"> 了解交换机：级联、端口聚合、堆叠、分层的四种网络结构方式
+                                                </div>
+                                                <div class="weui_ellipsis_fake_placeholder"></div>
+                                                <div class="weui_ellipsis_fake_extra">...</div>
+                                            </div>
+                                        </div>
+                                        <div class="weui-media-box__info">
+                                            <div class="weui-media-box__info__inner">
+                                                <div class="weui-media-box__info__meta"></div>
+                                                <div class="js_profile relate_profile relate_article_panel_active"
+                                                     data-username="gh_07c84efbcd7d">
+                                                    <div class="weui-media-box__info__meta"><span
+                                                            class="relate_profile_nickname">                 智能化安防弱电知识学习               </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relate_article_opr">
+                                                <button type="button" class="reset_btn dislike_btn js_feedback_btn">
+                                                    不喜欢
+                                                </button>
+                                            </div><!-- 去掉display:none;改用样式默认隐藏，加classnamme:feedback_dialog_show显示 -->
+                                            <div class="feedback_dialog_wrp js_feedback_dialog">
+                                                <div class="weui-mask js_mask"></div>
+                                                <!-- 底部时弹窗向上，加.feedback_dialog_pos_top -->
+                                                <div class="feedback_dialog js_dialog_wrp">
+                                                    <div class="feedback_dialog_hd weui-flex">
+                                                        <div class="weui-flex__item feedback_dialog_title">不看的原因</div>
+                                                        <button type="button"
+                                                                class="weui-btn weui-btn_primary weui-btn_mini weui-btn_disabled js_submit">
+                                                            确定
+                                                        </button>
+                                                    </div>
+                                                    <div class="feedback_dialog_bd">
+                                                        <ul class="feedback_tag_list">
+                                                            <!-- 选中时tag加.feedback_tag_selected -->
+                                                            <li class="feedback_tag_item js_reason js_tag_item"
+                                                                data-value="1">内容质量低
+                                                            </li>
+                                                            <li class="feedback_tag_item js_reason js_tag_item"
+                                                                data-value="2">不看此公众号
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weui-media-box__ft"
+                                         style="background-image:url(https://mmbiz.qlogo.cn/mmbiz_jpg/HpH8DibTIVbsuK3u1noiaF9AQsKib7fbbvmXUiatbamHwTM8cLNxmRY5IslTkVF8ou1ZHpe3eyhmhA7ZgcKcm89Rjw/0?wx_fmt=jpeg)"></div>
+                                </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mpda_bottom_container" id="js_bottom_ad_area" style="display: none;"></div>
+
+                <div id="js_iframetest" style="display:none;"></div>
+
+
+                <div class="rich_media_extra rich_media_extra_discuss" id="js_cmt_container" style="display: none;">
+
+                    <div class="discuss_mod" id="js_cmt_area" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="js_pc_qr_code" class="qr_code_pc_outer" style="display: block;">
+            <div class="qr_code_pc_inner">
+                <div class="qr_code_pc">
+                    <img id="js_pc_qr_code_img" class="qr_code_pc_img"
+                         src="/mp/qrcode?scene=10000004&amp;size=102&amp;__biz=MzI4NTM1NDgwNw==&amp;mid=2247493708&amp;idx=2&amp;sn=f59502d2d0ffad5b054304866f931941&amp;send_time=">
+                    <p>微信扫一扫<br>关注该公众号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var kuangs = {
+
+        init :function (){
+
+            kuangs.contentvies();
+        },
+        contentvies:function (){
+           var contentid =  $("body").data("contentid");
+
+           $.post("../../content/viewscount",{"contentId":contentid},function (res) {
+               $("#kuangviews").text(res);
+           })
+
+        }
+    }
+
+    $(function (){
+        kuangs.init()
+    })
+</script>
+
+</body>
+</html>
