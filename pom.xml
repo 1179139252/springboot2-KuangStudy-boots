@@ -20,6 +20,7 @@
         <module>05-springboot-source</module>
         <module>06-redis-string</module>
         <module>07-redis-hash</module>
+        <module>08-redis-shopcart</module>
 
     </modules>
 
