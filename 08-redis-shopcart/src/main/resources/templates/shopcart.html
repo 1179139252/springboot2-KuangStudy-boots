@@ -10,6 +10,7 @@
 </head>
 <body>
 <div id="app">
+
     <div class="mi-cart page-main">
         <div class="container">
             <div class="cart-container">
@@ -17,6 +18,7 @@
                     <div class="cart-wrap">
                         <div class="cart-goods-list">
                             <div class="list-head clearfix">
+                                <div><h1>{{title}}</h1></div>
                                 <div class="col col-check">
                                     <i class="iconfont icon-checkbox">√</i>全选
                                 </div>
@@ -40,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="list-body">
-                                <div class="list-item">
+                                <div class="list-item" v-for="(item,index) in resultList">
                                     <div class="item-box">
                                         <div class="item-table">
                                             <div class="item-row clearfix">
@@ -49,79 +51,46 @@
                                                 </div>
                                                 <div class="col col-img">
                                                     <a href="javascript:void(0)"><img alt=""
-                                                                                      src="//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1540808799.00378416.jpg?thumb=1&amp;w=80&amp;h=80"
+                                                                                      :src="item.productimg"
                                                                                       width="80" height="80"/></a>
                                                 </div>
                                                 <div class="col col-name">
                                                     <div class="tags"></div>
                                                     <div class="tags"></div>
-                                                    <h3 class="name"><a href="javascript:void(0)">小米蓝牙项圈耳机 青春版 黑色</a>
+                                                    <h3 class="name"><a
+                                                            href="javascript:void(0)">{{item.producttitle}}</a>
                                                     </h3>
                                                 </div>
                                                 <div class="col col-price">
-                                                    149元
+                                                    {{item.productprice}}元
                                                     <p class="pre-info"></p>
                                                 </div>
+
+
                                                 <div class="col col-num">
                                                     <div class="change-goods-num clearfix">
-                                                        <a href="javascript:void(0)"><i class="iconfont"></i></a>
-                                                        <input type="text" autocomplete="off" class="goods-num"/>
-                                                        <a href="javascript:void(0)"><i class="iconfont"></i></a>
+                                                        <a href="javascript:void(0)" @click="itemmiss(index)"><i
+                                                                class="iconfont"></i></a>
+                                                        <input type="text" autocomplete="off" v-model="item.productnum"
+                                                               class="goods-num"/>
+                                                        <a href="javascript:void(0)" @click="itemNumAdd(index)"><i
+                                                                class="iconfont"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="col col-total">
-                                                    149元
+                                                    {{item.productnum * item.productprice}}元
                                                     <p class="pre-info"></p>
                                                 </div>
                                                 <div class="col col-action">
-                                                    <a href="javascript:void(0);" title="删除" class="del"><i
+                                                    <a href="javascript:void(0);" @click="itemdel(index)" title="删除"
+                                                       class="del"><i
                                                             class="iconfont"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="list-item">
-                                    <div class="item-box">
-                                        <div class="item-table">
-                                            <div class="item-row clearfix">
-                                                <div class="col col-check">
-                                                    <i class="iconfont icon-checkbox icon-checkbox">√</i>
-                                                </div>
-                                                <div class="col col-img">
-                                                    <a href="javascript:void(0)"><img alt=""
-                                                                                      src="//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1525317107.95571913.jpg?thumb=1&amp;w=80&amp;h=80"
-                                                                                      width="80" height="80"/></a>
-                                                </div>
-                                                <div class="col col-name">
-                                                    <div class="tags"></div>
-                                                    <div class="tags"></div>
-                                                    <h3 class="name"><a href="javascript:void(0)">小米净水器滤芯 前置活性炭 白色</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="col col-price">
-                                                    69元
-                                                    <p class="pre-info"></p>
-                                                </div>
-                                                <div class="col col-num">
-                                                    <div class="change-goods-num clearfix">
-                                                        <a href="javascript:void(0)"><i class="iconfont"></i></a>
-                                                        <input type="text" autocomplete="off" class="goods-num"/>
-                                                        <a href="javascript:void(0)"><i class="iconfont"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-total">
-                                                    69元
-                                                    <p class="pre-info"></p>
-                                                </div>
-                                                <div class="col col-action">
-                                                    <a href="javascript:void(0);" title="删除" class="del"><i
-                                                            class="iconfont"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="raise-buy-box"></div>
@@ -130,8 +99,8 @@
                                 <a href="//www.mi.com/0" class="back-shopping">继续购物</a>
                                 <span class="cart-total">共 <i>2</i> 件商品，已选择 <i>0</i>件</span>
                             </div>
-                            <span class="total-price">合计：<em>0</em>元<a href="javascript:void(0);"
-                                                                       class="btn btn-a btn-disabled">去结算</a></span>
+                            <span class="total-price">合计：<em>{{itemToltal}}</em>元<a href="javascript:void(0);"
+                                                                                    class="btn btn-a btn-disabled">去结算</a></span>
                             <div class="no-select-tip">
                                 请勾选需要结算的商品
                                 <i class="arrow arrow-a"></i>
@@ -149,19 +118,85 @@
 <script src="../js/axios.min.js"></script>
 
 <script>
-    var vue = new Vue({
-        el:"#app",
-        data:{
-            title:"学相伴购物车",
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            title: "我的购物车",
             // 模拟飞哥的购物车
-            userid:1,
+            userid: 1,
             // 购物车总计
-            //totalPrice:0,
+            totalPrice: 0,
             // 购物车商品的数量
-            totalCount:0,
+            // totalCount: 0,
             // 购物车商品的数据
-            resultList:[]
-        }})
+            resultList: []
+        },
+        //钩子函数初始化完vm对象立马调用
+        created() {
+
+            this.loadInitData()
+        },
+        methods: {
+            loadInitData() {
+                // 异步请求渲染数据
+                axios.post('/shopcart/list?userid=' + this.userid).then((res) => {
+                    this.totalPrice = res.data.data.totalPrice
+                    this.totalCount = res.data.data.totalCount
+                    this.resultList = res.data.data.resultList
+                    // console.log(res.data.data)
+                })
+
+
+            },
+            // 商品数量修改
+            itemNumAdd(index) {
+                this.resultList[index].productnum++;
+
+
+            },
+            // 商品数量减少
+            itemmiss(index) {
+                this.resultList[index].productnum--;
+
+            },
+
+            // 异步删除数据 并实时渲染到页面
+            itemdel(index) {
+                // 商品id
+                let productid = this.resultList[index].productid
+                axios.post('/shopcart/del?userid=' + this.userid + "&productid=" + productid).then((res) => {
+                    console.log(res)
+                    if (res.data.data === 'succ') {
+                        console.log(index)
+                        var xx = this.resultList.splice(index, 1)
+
+                    }
+                })
+
+            }
+
+        },
+
+        // 计算属性
+        computed: {
+            // 实时计算当前商品的总金额
+            itemToltal() {
+                let total = 0
+                for (let i = 0; i < this.resultList.length; i++) {
+                    let items = this.resultList[i]
+                    total += items.productnum * items.productprice
+
+                }
+                return total
+
+            }
+
+
+        }
+
+
+    })
+
 
 </script>
 </html>

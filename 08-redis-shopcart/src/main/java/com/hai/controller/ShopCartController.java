@@ -109,10 +109,11 @@ public class ShopCartController {
      */
 
     @PostMapping("/shopcart/del")
+    @ResponseBody
     public String shopcartDel(Long userid, Long productid) {
         String shopCartid = SHOPCARTID + userid;
        redisTemplate.opsForHash().delete(shopCartid, productid.toString());
-        return "suscc";
+        return "succ";
     }
 
 
