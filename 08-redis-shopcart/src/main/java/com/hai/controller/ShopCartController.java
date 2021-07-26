@@ -57,6 +57,39 @@ public class ShopCartController {
     @ResponseBody
     @PostMapping("/shopcart/add")
     public ShopCart shopcartAdd(ShopCart shopCart) throws IllegalAccessException {
+//      购物车id
+        String shopKey = SHOPCARTID + shopCart.getUserid();
+//        拿到redis对象
+        HashOperations hashOperations = redisTemplate.opsForHash();
+//        商品的id
+        String productid = shopCart.getProductid().toString();
+
+//        判断是否存在，如果存在则数量加1
+        Boolean aBoolean = hashOperations.hasKey(shopKey, productid);
+        if (aBoolean){
+
+//            拿到里面的商品数量进行修改
+            Map<String, Object> shop = (HashMap<String, Object>) hashOperations.get(shopKey, productid);
+//            拿到数量进行+1
+            int productnum = (int) shop.get("productnum");
+//            返回原来的map，再添加
+            shop.put("productnum",++productnum);
+            hashOperations.put(shopKey,productid,shop);
+
+        }else {
+
+//        封装存入的数据
+            hashOperations.put(shopKey,productid,ObjectUtils.objectToMap(shopCart));
+        }
+
+        return shopCart;
+
+    }
+
+
+    /*@ResponseBody
+    @PostMapping("/shopcart/add")
+    public ShopCart shopcartAdd(ShopCart shopCart) throws IllegalAccessException {
 //        定义购物车的key
         String shopCartid = SHOPCARTID + shopCart.getUserid();
 
@@ -76,7 +109,7 @@ public class ShopCartController {
 
 
         return shopCart;
-    }
+    }*/
 
 
     /**
@@ -112,7 +145,7 @@ public class ShopCartController {
     @ResponseBody
     public String shopcartDel(Long userid, Long productid) {
         String shopCartid = SHOPCARTID + userid;
-       redisTemplate.opsForHash().delete(shopCartid, productid.toString());
+        redisTemplate.opsForHash().delete(shopCartid, productid.toString());
         return "succ";
     }
 
@@ -128,7 +161,7 @@ public class ShopCartController {
 
     @ResponseBody
     @PostMapping("/shopcart/list")
-    public Map<String,Object> shopcartList(Long userid) {
+    public Map<String, Object> shopcartList(Long userid) {
         String shopCartid = SHOPCARTID + userid;
 
 //       定义总金额
@@ -138,7 +171,7 @@ public class ShopCartController {
 //        拿到k v键值对
         Map<String, Map<String, Object>> entries = redisTemplate.opsForHash().entries(shopCartid);
 //        存放当前购物车的数据
-        List<Map<String,Object>> resultList = new ArrayList<>();
+        List<Map<String, Object>> resultList = new ArrayList<>();
         for (Map.Entry<String, Map<String, Object>> stringMapEntry : entries.entrySet()) {
 //            具体商品的数据
             resultList.add(stringMapEntry.getValue());
@@ -149,20 +182,16 @@ public class ShopCartController {
 
 
         // 6 : 返回购物车的数据信息
-        Map<String,Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         // 总计
-        map.put("totalPrice",totalmoney);
+        map.put("totalPrice", totalmoney);
         // 这个商品的个数
-        map.put("totalCount",size);
+        map.put("totalCount", size);
         // 具体商品的数据
-        map.put("resultList",resultList);
+        map.put("resultList", resultList);
 
         return map;
     }
-
-
-
-
 
 
 }

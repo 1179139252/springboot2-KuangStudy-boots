@@ -21,6 +21,7 @@
         <module>06-redis-string</module>
         <module>07-redis-hash</module>
         <module>08-redis-shopcart</module>
+        <module>09-redis-set</module>
 
     </modules>
 

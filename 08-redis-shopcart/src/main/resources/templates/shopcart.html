@@ -148,6 +148,7 @@
 
 
             },
+
             // 商品数量修改
             itemNumAdd(index) {
                 this.resultList[index].productnum++;
@@ -156,7 +157,12 @@
             },
             // 商品数量减少
             itemmiss(index) {
-                this.resultList[index].productnum--;
+                if(this.resultList[index].productnum>=2){
+
+                    this.resultList[index].productnum--;
+                }
+
+
 
             },
 

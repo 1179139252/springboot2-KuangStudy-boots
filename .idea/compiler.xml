@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="04-springboot-admin" />
         <module name="06-redis-string-02" />
+        <module name="09-redis-set" />
         <module name="03-springboot-mybatis-plus" />
         <module name="03-springboot-mybatis-admin" />
         <module name="01-springboot-exception" />
@@ -36,6 +37,7 @@
       <module name="06-redis-string-02" options="-parameters" />
       <module name="07-redis-hash" options="-parameters" />
       <module name="08-redis-shopcart" options="-parameters" />
+      <module name="09-redis-set" options="-parameters" />
       <module name="springboot-result" options="-parameters" />
     </option>
   </component>
