@@ -10,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/07-redis-hash/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/08-redis-shopcart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/09-redis-set/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-springboot-redis-hotshops/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-result/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -32,10 +32,8 @@ public class BlackUserController {
     public String removeBlackUser(Long userId){
 
         Long aLong = blackUserService.removeBlackUsers(userId);
-
         if (aLong ==1){
             return "移出成功！";
-
         }else {
 
             return "移出失败";

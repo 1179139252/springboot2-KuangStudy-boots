@@ -6,10 +6,10 @@
 -->
 <application generated-by="intellij" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com http://update.zeroturnaround.com/jrebel/rebel-2_3.xsd">
 
-	<id>08-redis-shopcart</id>
+	<id>10-springboot-redis-hotshops</id>
 
 	<classpath>
-		<dir name="/Users/merry/Documents/study_docment/developer/java/springboot2-KuangStudy-boots/08-redis-shopcart/target/classes">
+		<dir name="/Users/merry/Documents/study_docment/developer/java/springboot2-KuangStudy-boots/10-springboot-redis-hotshops/target/classes">
 		</dir>
 	</classpath>
 

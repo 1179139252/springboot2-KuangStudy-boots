@@ -1,6 +1,4 @@
 package com.hai.service;
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +26,6 @@ public class BlackUserService {
             redisTemplate.opsForSet().add(USER_BLACK_SET,"黑名单用户:"+i);
         }
     }
-
     //添加黑名单
     public Long addBlackUsers(Long userId) {
 //        首先判断当前人员是否存在在黑名单

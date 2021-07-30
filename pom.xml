@@ -22,6 +22,7 @@
         <module>07-redis-hash</module>
         <module>08-redis-shopcart</module>
         <module>09-redis-set</module>
+        <module>10-springboot-redis-hotshops</module>
 
     </modules>
 
